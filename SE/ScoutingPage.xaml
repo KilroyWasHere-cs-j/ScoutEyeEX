@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SE.ScoutingPage"
+             Title="Scouting Page">
+    <StackLayout>
+        <Label 
+            x:Name="WelcomeMessageLabel"
+            Text="Paste"
+            TextDecorations="Underline"
+            FontSize="20"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Margin="0,0,0,10"/>
+
+        <HorizontalStackLayout
+            VerticalOptions="Center" 
+            HorizontalOptions="Center">
+            <Border Stroke="#2B0B98"
+                        StrokeShape="RoundRectangle 10,10,10,10"
+                        StrokeThickness="4"
+                        Background="White"
+                        Padding="16,8"
+                        HorizontalOptions="Center">
+                <StackLayout>
+                    <Label x:Name="MatchNumberLabel" Text="__MatNum__" Margin="0,0,0,0"/>
+                    <Label x:Name="TeamNumberLabel" Text="__TeNum__" Margin="0,2,0,0"/>
+                </StackLayout>
+            </Border>
+        </HorizontalStackLayout>
+
+        <ScrollView x:Name="scrollView"
+            VerticalOptions="FillAndExpand"
+            VerticalScrollBarVisibility="Always">
+
+            <StackLayout>
+
+                <HorizontalStackLayout
+                    HorizontalOptions="Center">
+                    <Button 
+                        x:Name="LogMatchButton"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Center"
+                        Clicked="OnLogMatchClicked"
+                        Text="Log Match"
+                        Margin="0,0,0,0"/>
+
+                    <Button
+                        x:Name="Clear"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Center"
+                        Clicked="OnClearClicked"
+                        Text="Clear"
+                        Margin="10,0,0,0"/>
+                </HorizontalStackLayout>
+
+                <Border Stroke="#2B0B98"
+                        StrokeShape="RoundRectangle 10,10,10,10"
+                        StrokeThickness="4"
+                        Background="White"
+                        Padding="16,8"
+                        HorizontalOptions="Center">
+                    <VerticalStackLayout
+                        HorizontalOptions="Center">
+                        <Label x:Name="AutoSectionLabel"
+                               Text="Autonomous"
+                               FontAttributes="Bold"
+                               FontSize="20"
+                               TextColor="Black"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               Margin="20"/>
+
+                        <Label x:Name="auto1Label"
+                               Text="..."
+                               TextDecorations="Underline"
+                               FontAttributes="Bold"/>
+
+                        <Picker x:Name="auto1"
+                                Title="..."
+                                IsVisible="true"
+                                TextColor="Black"
+                                FontSize="20"/>
+
+                        <Label x:Name="auto2Label"
+                                 Text="..."
+                                 TextDecorations="Underline"
+                                 FontAttributes="Bold"/>
+
+                        <Picker x:Name="auto2"
+                                Title="..."
+                                IsVisible="true"
+                                TextColor="Black"
+                                FontSize="20"/>
+
+                        <Picker x:Name="auto3"
+                                Title="..."
+                                IsVisible="true"
+                                TextColor="Black"
+                                FontSize="20"/>
+
+                        <Picker x:Name="auto4"
+                                Title="..."
+                                IsVisible="true"
+                                TextColor="Black"
+                                FontSize="20"/>
+
+                        <Picker x:Name="auto5"
+                                Title="..."
+                                IsVisible="true"
+                                TextColor="Black"
+                                FontSize="20"/>
+
+                        <Picker x:Name="auto6"
+                                Title="..."
+                                IsVisible="true"
+                                TextColor="Black"
+                                FontSize="20"/>
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border Stroke="#2B0B98"
+                        StrokeShape="RoundRectangle 10,10,10,10"
+                        StrokeThickness="4"
+                        Background="White"
+                        Padding="16,8"
+                        HorizontalOptions="Center">
+                    <VerticalStackLayout
+                        HorizontalOptions="Center">
+                        <Label x:Name="TeleopSectionLabel"
+                               Text="Teleoperated"
+                               FontAttributes="Bold"
+                               FontSize="20"
+                               TextColor="Black"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               Margin="20"/>
+
+                        <Picker x:Name="teleop1"
+                                Title="..."
+                                IsVisible="true"
+                                TextColor="Black"
+                                FontSize="20"/>
+
+                        <Picker x:Name="teleop2"
+                                Title="..."
+                                IsVisible="true"
+                                TextColor="Black"
+                                FontSize="20"/>
+
+                        <Picker x:Name="teleop3"
+                                Title="..."
+                                IsVisible="true"
+                                TextColor="Black"
+                                FontSize="20"/>
+
+                        <Picker x:Name="teleop4"
+                                Title="..."
+                                IsVisible="true"
+                                TextColor="Black"
+                                FontSize="20"/>
+
+                        <Picker x:Name="teleop5"
+                                Title="..."
+                                IsVisible="true"
+                                TextColor="Black"
+                                FontSize="20"/>
+
+                        <Picker x:Name="teleop6"
+                                Title="..."
+                                IsVisible="true"
+                                TextColor="Black"
+                                FontSize="20"/>
+
+                    </VerticalStackLayout>
+                </Border>
+
+                <BoxView Color="#2B0B98"
+                         CornerRadius="0"
+                         WidthRequest="2000"
+                         HeightRequest="160"
+                         VerticalOptions="Center"
+                         HorizontalOptions="Center" />
+
+            </StackLayout>
+
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

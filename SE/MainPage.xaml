@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SE.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
+
+            <ImageButton Source="horus.svg"
+                    Clicked="OnHorusClicked"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" />
+
+            <Label
+                x:Name="WelcomeLabel"
+                Text="Welcome to ScoutEyeEX!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center"
+                Margin="80,0,0,0"/>
+
+            <Label
+                x:Name="VersionNumberLabel"
+                Text="v.0.0"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center"/>
+
+            <Label
+                x:Name="BuiltOnDotNETMAUILabel"
+                Text="Built on .NET MAUI"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Level1"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="ToScouting"
+                Text="Scout"
+                SemanticProperties.Hint="Opens scouting page"
+                Clicked="OnToScoutingClicked"
+                HorizontalOptions="Center"
+                WidthRequest="200"
+                HeightRequest="40"
+                MaximumWidthRequest="220"
+                MaximumHeightRequest="50"/>
+
+            <Border Stroke="#2B0B98"
+                        StrokeShape="RoundRectangle 10,10,10,10"
+                        StrokeThickness="4"
+                        Background="White"
+                        Padding="16,8"
+                        HorizontalOptions="Center"
+                        WidthRequest="250"
+                        HeightRequest="60"
+                        MaximumWidthRequest="300"
+                        MaximumHeightRequest="100">
+                <StackLayout>
+                    <Entry x:Name="ScoutNameEntry"
+                           Placeholder="Scout Name"
+                           ClearButtonVisibility="WhileEditing"
+                           IsSpellCheckEnabled="false"
+                           IsTextPredictionEnabled="false"/>
+                </StackLayout>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

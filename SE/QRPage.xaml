@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SE.QRPage"
+             Title="QRPage">
+    <VerticalStackLayout>
+        <Label 
+            Text="QR Generator"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Image
+            x:Name="QrCodeImage"
+            HeightRequest="200"
+            HorizontalOptions="Center"
+            WidthRequest="200"/>
+
+        <Button x:Name="NextMatchButton"
+                Text="Next Match"
+                Clicked="OnToNextMatchClicked"
+                WidthRequest="150"
+                HeightRequest="50"
+                MaximumHeightRequest="60"
+                MaximumWidthRequest="160"/>
+
+    </VerticalStackLayout>
+</ContentPage>
