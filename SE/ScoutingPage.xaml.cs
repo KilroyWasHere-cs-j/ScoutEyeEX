@@ -16,22 +16,129 @@ public partial class ScoutingPage : ContentPage
     }
     private void LoadPage()
 	{
-        // Name all the trackables
+        // Name all the autonomous trackables
         auto1Label.Text = parser.GetItemById("Auto0");
         auto2Label.Text = parser.GetItemById("Auto1");
-        auto3.Title = parser.GetItemById("Auto2");
-        auto4.Title = parser.GetItemById("Auto3");
-        auto5.Title = parser.GetItemById("Auto4");
-        auto6.Title = parser.GetItemById("Auto5");
+        auto3Label.Text = parser.GetItemById("Auto2");
+        auto4Label.Text = parser.GetItemById("Auto3");
+        auto5Label.Text = parser.GetItemById("Auto4");
+        auto6Label.Text = parser.GetItemById("Auto5");
 
-        teleop1.Title = parser.GetItemById("Teleop0");
-        teleop2.Title = parser.GetItemById("Teleop1");
-        teleop3.Title = parser.GetItemById("Teleop2");
-        teleop4.Title = parser.GetItemById("Teleop3");
-        teleop5.Title = parser.GetItemById("Teleop4");
-        teleop6.Title = parser.GetItemById("Teleop5");
+        // Name all the teleoperated trackables
+        teleop1Label.Text = parser.GetItemById("Teleop0");
+        teleop2Label.Text = parser.GetItemById("Teleop1");
+        teleop3Label.Text = parser.GetItemById("Teleop2");
+        teleop4Label.Text = parser.GetItemById("Teleop3");
+        teleop5Label.Text = parser.GetItemById("Teleop4");
+        teleop6Label.Text = parser.GetItemById("Teleop5");
 
+        // Determine visibility of autonomous trackables and their respective labels
+        auto1.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto0Hide"));
+        auto1Label.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto0Hide"));
+        auto2.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto1Hide"));
+        auto2Label.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto1Hide"));
+        auto3.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto2Hide"));
+        auto3Label.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto2Hide"));
+        auto4.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto3Hide"));
+        auto4Label.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto3Hide"));
+        auto5.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto4Hide"));
+        auto5Label.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto4Hide"));
+        auto6.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto5Hide"));
+        auto6Label.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto5Hide"));
 
+        // Determine visibility of teleoperated trackables and their respective labels
+        teleop1.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop0Hide"));
+        teleop1Label.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop0Hide"));
+        teleop2.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop1Hide"));
+        teleop2Label.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop1Hide"));
+        teleop3.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop2Hide"));
+        teleop3Label.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop2Hide"));
+        teleop4.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop3Hide"));
+        teleop4Label.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop3Hide"));
+        teleop5.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop4Hide"));
+        teleop5Label.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop4Hide"));
+        teleop6.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop5Hide"));
+        teleop6Label.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop5Hide"));
+
+        // Get ready from stupid stupid code
+
+        foreach(var i in GetFill("Auto0Items"))
+        {
+            auto1.Items.Add(i);
+        }
+
+        foreach (var i in GetFill("Auto1Items"))
+        {
+            auto2.Items.Add(i);
+        }
+
+        foreach (var i in GetFill("Auto2Items"))
+        {
+            auto3.Items.Add(i);
+        }
+
+        foreach (var i in GetFill("Auto3Items"))
+        {
+            auto4.Items.Add(i);
+        }
+
+        foreach (var i in GetFill("Auto4Items"))
+        {
+            auto5.Items.Add(i);
+        }
+
+        foreach (var i in GetFill("Auto5Items"))
+        {
+            auto6.Items.Add(i);
+        }
+
+        foreach (var i in GetFill("Teleop0Items"))
+        {
+            teleop1.Items.Add(i);
+        }
+
+        foreach (var i in GetFill("Teleop1Items"))
+        {
+            teleop2.Items.Add(i);
+        }
+
+        foreach (var i in GetFill("Teleop2Items"))
+        {
+            teleop3.Items.Add(i);
+        }
+
+        foreach (var i in GetFill("Teleop3Items"))
+        {
+            teleop4.Items.Add(i);
+        }
+
+        foreach (var i in GetFill("Teleop4Items"))
+        {
+            teleop5.Items.Add(i);
+        }
+
+        foreach (var i in GetFill("Teleop5Items"))
+        {
+            teleop6.Items.Add(i);
+        }
+    }
+
+    private string[] GetFill(string id)
+    {
+        string content = parser.GetItemById(id);
+        if(content.Contains("NumFill"))
+        {
+            string[] nums = new string[1000];
+            for (int i = 0; i < 1000; i++)
+            {
+                nums[i] = i.ToString();
+            }
+            return nums;
+        }
+        else
+        {
+            return content.Split(',');
+        }
     }
 
     #region EventHandlers

@@ -59,7 +59,9 @@
                         StrokeThickness="4"
                         Background="White"
                         Padding="16,8"
-                        HorizontalOptions="Center">
+                        HorizontalOptions="Center"
+                        WidthRequest="210"
+                        MaximumWidthRequest="220">
                     <VerticalStackLayout
                         HorizontalOptions="Center">
                         <Label x:Name="AutoSectionLabel"
@@ -72,50 +74,76 @@
                                Margin="20"/>
 
                         <Label x:Name="auto1Label"
-                               Text="..."
+                               Text="0"
                                TextDecorations="Underline"
+                               FontSize="18"
                                FontAttributes="Bold"/>
 
                         <Picker x:Name="auto1"
-                                Title="..."
+                                Title="0"
                                 IsVisible="true"
                                 TextColor="Black"
-                                FontSize="20"/>
+                                FontSize="14"/>
 
                         <Label x:Name="auto2Label"
-                                 Text="..."
+                                 Text="0"
                                  TextDecorations="Underline"
+                                 FontSize="18"
                                  FontAttributes="Bold"/>
 
                         <Picker x:Name="auto2"
-                                Title="..."
+                                Title="0"
                                 IsVisible="true"
                                 TextColor="Black"
-                                FontSize="20"/>
+                                FontSize="14"/>
+
+                        <Label x:Name="auto3Label"
+                                 Text="0"
+                                 TextDecorations="Underline"
+                                 FontSize="18"
+                                 FontAttributes="Bold"/>
 
                         <Picker x:Name="auto3"
-                                Title="..."
+                                Title="0"
+                                FontSize="14"
                                 IsVisible="true"
-                                TextColor="Black"
-                                FontSize="20"/>
+                                TextColor="Black"/>
+
+                        <Label x:Name="auto4Label"
+                                    Text="0"
+                                    TextDecorations="Underline"
+                                    FontSize="18"
+                                    FontAttributes="Bold"/>
 
                         <Picker x:Name="auto4"
-                                Title="..."
+                                Title="0"
+                                FontSize="14"
                                 IsVisible="true"
-                                TextColor="Black"
-                                FontSize="20"/>
+                                TextColor="Black"/>
+
+                        <Label x:Name="auto5Label"
+                                    Text="0"
+                                    TextDecorations="Underline"
+                                    FontSize="18"
+                                    FontAttributes="Bold"/>
 
                         <Picker x:Name="auto5"
-                                Title="..."
+                                Title="0"
                                 IsVisible="true"
                                 TextColor="Black"
-                                FontSize="20"/>
+                                FontSize="14"/>
+
+                        <Label x:Name="auto6Label"
+                                    Text="0"
+                                    TextDecorations="Underline"
+                                    FontSize="18"
+                                    FontAttributes="Bold"/>
 
                         <Picker x:Name="auto6"
-                                Title="..."
+                                Title="0"
                                 IsVisible="true"
                                 TextColor="Black"
-                                FontSize="20"/>
+                                FontSize="14"/>
                     </VerticalStackLayout>
                 </Border>
 
@@ -124,7 +152,9 @@
                         StrokeThickness="4"
                         Background="White"
                         Padding="16,8"
-                        HorizontalOptions="Center">
+                        HorizontalOptions="Center"
+                        WidthRequest="210"
+                        MaximumWidthRequest="220">
                     <VerticalStackLayout
                         HorizontalOptions="Center">
                         <Label x:Name="TeleopSectionLabel"
@@ -134,43 +164,79 @@
                                TextColor="Black"
                                HorizontalOptions="Center"
                                VerticalOptions="Center"
-                               Margin="20"/>
+                               Margin="15"/>
+
+                        <Label x:Name="teleop1Label"
+                                 Text="0"
+                                 TextDecorations="Underline"
+                                 FontSize="18"
+                                 FontAttributes="Bold"/>
 
                         <Picker x:Name="teleop1"
-                                Title="..."
+                                Title="0"
                                 IsVisible="true"
                                 TextColor="Black"
-                                FontSize="20"/>
+                                FontSize="14"/>
+
+                        <Label x:Name="teleop2Label"
+                                 Text="0"
+                                 TextDecorations="Underline"
+                                 FontSize="18"
+                                 FontAttributes="Bold"/>
 
                         <Picker x:Name="teleop2"
-                                Title="..."
+                                Title="0"
                                 IsVisible="true"
                                 TextColor="Black"
-                                FontSize="20"/>
+                                FontSize="14"/>
+
+                        <Label x:Name="teleop3Label"
+                                 Text="0"
+                                 TextDecorations="Underline"
+                                 FontSize="18"
+                                 FontAttributes="Bold"/>
 
                         <Picker x:Name="teleop3"
-                                Title="..."
+                                Title="0"
                                 IsVisible="true"
                                 TextColor="Black"
-                                FontSize="20"/>
+                                FontSize="14"/>
+
+                        <Label x:Name="teleop4Label"
+                                    Text="0"
+                                    TextDecorations="Underline"
+                                    FontSize="18"
+                                    FontAttributes="Bold"/>
 
                         <Picker x:Name="teleop4"
-                                Title="..."
+                                Title="0"
                                 IsVisible="true"
                                 TextColor="Black"
-                                FontSize="20"/>
+                                FontSize="14"/>
+
+                        <Label x:Name="teleop5Label"
+                                    Text="0"
+                                    TextDecorations="Underline"
+                                    FontSize="18"
+                                    FontAttributes="Bold"/>
 
                         <Picker x:Name="teleop5"
-                                Title="..."
+                                Title="0"
                                 IsVisible="true"
                                 TextColor="Black"
-                                FontSize="20"/>
+                                FontSize="14"/>
+
+                        <Label x:Name="teleop6Label"
+                                    Text="0"
+                                    TextDecorations="Underline"
+                                    FontSize="18"
+                                    FontAttributes="Bold"/>
 
                         <Picker x:Name="teleop6"
-                                Title="..."
+                                Title="0"
                                 IsVisible="true"
                                 TextColor="Black"
-                                FontSize="20"/>
+                                FontSize="14"/>
 
                     </VerticalStackLayout>
                 </Border>

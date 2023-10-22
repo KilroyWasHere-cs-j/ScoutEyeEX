@@ -14,20 +14,16 @@ public partial class MatchInfo : ContentPage
 	{
         try
         {
-            match.matchNumber = int.Parse(MatchNumberEntry.Text.ToString());
-            match.teamNumber = int.Parse(TeamNumberEntry.Text.ToString());
-        }
-        catch
-        {
-            await DisplayAlert("Alert", "Please insure that all the fields are filled out correctly.", "OK");
-            if(!AllianceLabel.Text.Contains("Pink"))
+            match.matchNumber = (int)Int64.Parse(MatchNumberEntry.Text.ToString());
+            match.teamNumber = (int)Int64.Parse(TeamNumberEntry.Text.ToString());
+            if (!AllianceLabel.Text.Contains("Pink"))
             {
                 await Navigation.PushAsync(new ScoutingPage(match));
             }
-            else
-            {
-                await DisplayAlert("Alert", "Please select an alliance.", "OK");
-            }
+        }
+        catch
+        {
+            await DisplayAlert("Alert", "Please insure that Match Number and Team Number are correctly completed.", "OK");
         }
     }
 
