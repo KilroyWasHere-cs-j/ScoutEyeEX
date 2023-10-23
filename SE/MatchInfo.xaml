@@ -47,7 +47,7 @@
                 
                 <Label x:Name="AllianceLabel"
                        Text="Pink Alliance"
-                       FontSize="Large"
+                       FontSize="18"
                        HorizontalOptions="Center"/>
 
                 <Switch x:Name="AllianceSwitch"
