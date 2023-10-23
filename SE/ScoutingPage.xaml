@@ -80,7 +80,7 @@
                                FontAttributes="Bold"/>
 
                         <Picker x:Name="auto1"
-                                Title="0"
+                                Title=""
                                 IsVisible="true"
                                 TextColor="Black"
                                 FontSize="14"/>
@@ -92,7 +92,7 @@
                                  FontAttributes="Bold"/>
 
                         <Picker x:Name="auto2"
-                                Title="0"
+                                Title=""
                                 IsVisible="true"
                                 TextColor="Black"
                                 FontSize="14"/>
@@ -104,7 +104,7 @@
                                  FontAttributes="Bold"/>
 
                         <Picker x:Name="auto3"
-                                Title="0"
+                                Title=""
                                 FontSize="14"
                                 IsVisible="true"
                                 TextColor="Black"/>
@@ -116,7 +116,7 @@
                                     FontAttributes="Bold"/>
 
                         <Picker x:Name="auto4"
-                                Title="0"
+                                Title=""
                                 FontSize="14"
                                 IsVisible="true"
                                 TextColor="Black"/>
@@ -128,7 +128,7 @@
                                     FontAttributes="Bold"/>
 
                         <Picker x:Name="auto5"
-                                Title="0"
+                                Title=""
                                 IsVisible="true"
                                 TextColor="Black"
                                 FontSize="14"/>
@@ -140,7 +140,7 @@
                                     FontAttributes="Bold"/>
 
                         <Picker x:Name="auto6"
-                                Title="0"
+                                Title=""
                                 IsVisible="true"
                                 TextColor="Black"
                                 FontSize="14"/>
@@ -173,7 +173,7 @@
                                  FontAttributes="Bold"/>
 
                         <Picker x:Name="teleop1"
-                                Title="0"
+                                Title=""
                                 IsVisible="true"
                                 TextColor="Black"
                                 FontSize="14"/>
@@ -185,7 +185,7 @@
                                  FontAttributes="Bold"/>
 
                         <Picker x:Name="teleop2"
-                                Title="0"
+                                Title=""
                                 IsVisible="true"
                                 TextColor="Black"
                                 FontSize="14"/>
@@ -197,7 +197,7 @@
                                  FontAttributes="Bold"/>
 
                         <Picker x:Name="teleop3"
-                                Title="0"
+                                Title=""
                                 IsVisible="true"
                                 TextColor="Black"
                                 FontSize="14"/>
@@ -209,7 +209,7 @@
                                     FontAttributes="Bold"/>
 
                         <Picker x:Name="teleop4"
-                                Title="0"
+                                Title=""
                                 IsVisible="true"
                                 TextColor="Black"
                                 FontSize="14"/>
@@ -221,7 +221,7 @@
                                     FontAttributes="Bold"/>
 
                         <Picker x:Name="teleop5"
-                                Title="0"
+                                Title=""
                                 IsVisible="true"
                                 TextColor="Black"
                                 FontSize="14"/>
@@ -233,7 +233,7 @@
                                     FontAttributes="Bold"/>
 
                         <Picker x:Name="teleop6"
-                                Title="0"
+                                Title=""
                                 IsVisible="true"
                                 TextColor="Black"
                                 FontSize="14"/>
