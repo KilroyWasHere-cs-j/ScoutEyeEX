@@ -19,25 +19,84 @@ public partial class ScoutingPage : ContentPage
 
     private void LoadPage()
 	{
-        //ObservableCollection<object> cityName = new ObservableCollection<object>();
-        //cityName.Add("Chennai");
-        //cityName.Add("Mumbai");
-        //cityName.Add("Delhi");
-        //cityName.Add("Kolkata");
-        //cityName.Add("Bangalore");
-        //cityName.Add("Hyderabad");
-        //cityName.Add("Pune");
-        //cityName.Add("Ahmedabad");
-        //cityName.Add("Jaipur");
-        //cityName.Add("Lucknow");
-        //cityName.Add("Chandigarh");
-        //PickerColumn pickerColumn = new PickerColumn()
-        //{
-        //    HeaderText = "Select City",
-        //    ItemsSource = cityName,
-        //    SelectedIndex = 1,
-        //};
-        //this.picker.Columns.Add(pickerColumn);
+        // Find a better way of doing this
+        ObservableCollection<object> data = new ObservableCollection<object>();
+        foreach (var i in GetFill("Auto0Items"))
+        {
+            data.Add(i);
+        }   
+        PickerColumn pickerColumn = new PickerColumn()
+        {
+            HeaderText = "Select City",
+            ItemsSource = data,
+            SelectedIndex = 0,
+        };
+        this.auto1.Columns.Add(pickerColumn);
+
+        ObservableCollection<object> data1 = new ObservableCollection<object>();
+        foreach (var i in GetFill("Auto1Items"))
+        {
+            data1.Add(i);
+        }
+        PickerColumn pickerColumn1 = new PickerColumn()
+        {
+            HeaderText = "Select City",
+            ItemsSource = data1,
+            SelectedIndex = 0,
+        };
+        this.auto2.Columns.Add(pickerColumn1);
+
+        ObservableCollection<object> data2 = new ObservableCollection<object>();
+        foreach (var i in GetFill("Auto2Items"))
+        {
+            data2.Add(i);
+        }
+        PickerColumn pickerColumn2 = new PickerColumn()
+        {
+            HeaderText = "Select City",
+            ItemsSource = data2,
+            SelectedIndex = 0,
+        };
+        this.auto3.Columns.Add(pickerColumn2);
+
+        ObservableCollection<object> data3 = new ObservableCollection<object>();
+        foreach (var i in GetFill("Auto3Items"))
+        {
+            data3.Add(i);
+        }
+        PickerColumn pickerColumn3 = new PickerColumn()
+        {
+            HeaderText = "Select City",
+            ItemsSource = data3,
+            SelectedIndex = 0,
+        };
+        this.auto4.Columns.Add(pickerColumn3);
+
+        ObservableCollection<object> data4 = new ObservableCollection<object>();
+        foreach (var i in GetFill("Auto4Items"))
+        {
+            data4.Add(i);
+        }
+        PickerColumn pickerColumn4 = new PickerColumn()
+        {
+            HeaderText = "Select City",
+            ItemsSource = data4,
+            SelectedIndex = 0,
+        };
+        this.auto5.Columns.Add(pickerColumn4);
+
+        ObservableCollection<object> data5 = new ObservableCollection<object>();
+        foreach (var i in GetFill("Auto1Items"))
+        {
+            data5.Add(i);
+        }
+        PickerColumn pickerColumn5 = new PickerColumn()
+        {
+            HeaderText = "Select City",
+            ItemsSource = data5,
+            SelectedIndex = 0,
+        };
+        this.auto6.Columns.Add(pickerColumn5);
 
         // Name all the autonomous trackables
         auto1Label.Text = parser.GetItemById("Auto0");
@@ -83,33 +142,6 @@ public partial class ScoutingPage : ContentPage
         teleop6.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop5Hide"));
         teleop6Label.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop5Hide"));
 
-        // Get ready from stupid stupid code
-
-        foreach (var i in GetFill("Auto1Items"))
-        {
-            auto2.Items.Add(i);
-        }
-
-        foreach (var i in GetFill("Auto2Items"))
-        {
-            auto3.Items.Add(i);
-        }
-
-        foreach (var i in GetFill("Auto3Items"))
-        {
-            auto4.Items.Add(i);
-        }
-
-        foreach (var i in GetFill("Auto4Items"))
-        {
-            auto5.Items.Add(i);
-        }
-
-        foreach (var i in GetFill("Auto5Items"))
-        {
-            auto6.Items.Add(i);
-        }
-
         foreach (var i in GetFill("Teleop0Items"))
         {
             teleop1.Items.Add(i);
@@ -139,6 +171,11 @@ public partial class ScoutingPage : ContentPage
         {
             teleop6.Items.Add(i);
         }
+    }
+
+    private void Clear()
+    {
+
     }
 
     private string[] GetFill(string id)
@@ -179,6 +216,7 @@ public partial class ScoutingPage : ContentPage
         switch (response)
         {
             case true:
+                Clear();
                 break;
             case false:
                 break;

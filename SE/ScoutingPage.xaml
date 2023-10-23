@@ -63,8 +63,8 @@
                         Background="White"
                         Padding="16,8"
                         HorizontalOptions="Center"
-                        WidthRequest="210"
-                        MaximumWidthRequest="220">
+                        WidthRequest="230"
+                        MaximumWidthRequest="240">
                     <VerticalStackLayout
                         HorizontalOptions="Center">
                         <Label x:Name="AutoSectionLabel"
@@ -82,15 +82,12 @@
                                FontSize="18"
                                FontAttributes="Bold"/>
 
-                        <picker:SfPicker x:Name="uto1"
-                                         HeightRequest="280" 
+                        <picker:SfPicker x:Name="auto1"
+                                         HeightRequest="80" 
                                          WidthRequest="300">
                             <picker:SfPicker.HeaderView>
-                                <picker:PickerHeaderView Text="Select a color" Height="40" />
+                                <picker:PickerHeaderView Text="Select a option" Height="40" />
                             </picker:SfPicker.HeaderView>
-                            <picker:SfPicker.FooterView>
-                                <picker:PickerFooterView ShowOkButton="True" Height="40" />
-                            </picker:SfPicker.FooterView>
                             <picker:SfPicker.Columns>
                                 <picker:PickerColumn ItemsSource="{Binding auto1DS}" />
                             </picker:SfPicker.Columns>
@@ -102,11 +99,16 @@
                                  FontSize="18"
                                  FontAttributes="Bold"/>
 
-                        <Picker x:Name="auto2"
-                                Title=""
-                                IsVisible="true"
-                                TextColor="Black"
-                                FontSize="14"/>
+                        <picker:SfPicker x:Name="auto2"
+                                         HeightRequest="80" 
+                                         WidthRequest="300">
+                            <picker:SfPicker.HeaderView>
+                                <picker:PickerHeaderView Text="Select a option" Height="40" />
+                            </picker:SfPicker.HeaderView>
+                            <picker:SfPicker.Columns>
+                                <picker:PickerColumn HeaderText="Colors" ItemsSource="{Binding auto1DS}" />
+                            </picker:SfPicker.Columns>
+                        </picker:SfPicker>
 
                         <Label x:Name="auto3Label"
                                  Text="0"
@@ -114,11 +116,16 @@
                                  FontSize="18"
                                  FontAttributes="Bold"/>
 
-                        <Picker x:Name="auto3"
-                                Title=""
-                                FontSize="14"
-                                IsVisible="true"
-                                TextColor="Black"/>
+                        <picker:SfPicker x:Name="auto3"
+                 HeightRequest="80" 
+                 WidthRequest="300">
+                            <picker:SfPicker.HeaderView>
+                                <picker:PickerHeaderView Text="Select a option" Height="40" />
+                            </picker:SfPicker.HeaderView>
+                            <picker:SfPicker.Columns>
+                                <picker:PickerColumn HeaderText="Colors" ItemsSource="{Binding auto1DS}" />
+                            </picker:SfPicker.Columns>
+                        </picker:SfPicker>
 
                         <Label x:Name="auto4Label"
                                     Text="0"
@@ -126,11 +133,16 @@
                                     FontSize="18"
                                     FontAttributes="Bold"/>
 
-                        <Picker x:Name="auto4"
-                                Title=""
-                                FontSize="14"
-                                IsVisible="true"
-                                TextColor="Black"/>
+                        <picker:SfPicker x:Name="auto4"
+                 HeightRequest="80" 
+                 WidthRequest="300">
+                            <picker:SfPicker.HeaderView>
+                                <picker:PickerHeaderView Text="Select a option" Height="40" />
+                            </picker:SfPicker.HeaderView>
+                            <picker:SfPicker.Columns>
+                                <picker:PickerColumn HeaderText="Colors" ItemsSource="{Binding auto1DS}" />
+                            </picker:SfPicker.Columns>
+                        </picker:SfPicker>
 
                         <Label x:Name="auto5Label"
                                     Text="0"
@@ -138,11 +150,16 @@
                                     FontSize="18"
                                     FontAttributes="Bold"/>
 
-                        <Picker x:Name="auto5"
-                                Title=""
-                                IsVisible="true"
-                                TextColor="Black"
-                                FontSize="14"/>
+                        <picker:SfPicker x:Name="auto5"
+                 HeightRequest="80" 
+                 WidthRequest="300">
+                            <picker:SfPicker.HeaderView>
+                                <picker:PickerHeaderView Text="Select a option" Height="40" />
+                            </picker:SfPicker.HeaderView>
+                            <picker:SfPicker.Columns>
+                                <picker:PickerColumn HeaderText="Colors" ItemsSource="{Binding auto1DS}" />
+                            </picker:SfPicker.Columns>
+                        </picker:SfPicker>
 
                         <Label x:Name="auto6Label"
                                     Text="0"
@@ -150,11 +167,16 @@
                                     FontSize="18"
                                     FontAttributes="Bold"/>
 
-                        <Picker x:Name="auto6"
-                                Title=""
-                                IsVisible="true"
-                                TextColor="Black"
-                                FontSize="14"/>
+                        <picker:SfPicker x:Name="auto6"
+                 HeightRequest="80" 
+                 WidthRequest="300">
+                            <picker:SfPicker.HeaderView>
+                                <picker:PickerHeaderView Text="Select a option" Height="40" />
+                            </picker:SfPicker.HeaderView>
+                            <picker:SfPicker.Columns>
+                                <picker:PickerColumn HeaderText="Colors" ItemsSource="{Binding auto1DS}" />
+                            </picker:SfPicker.Columns>
+                        </picker:SfPicker>
                     </VerticalStackLayout>
                 </Border>
 
