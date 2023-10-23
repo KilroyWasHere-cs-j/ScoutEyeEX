@@ -1,8 +1,10 @@
 namespace SE;
+using Syncfusion.Maui.Picker;
+using System.Collections.ObjectModel;
 
 public partial class ScoutingPage : ContentPage
 {
-	private Match match;
+    private Match match;
     private XMLParser parser;
 	public ScoutingPage(Match _match)
 	{
@@ -14,8 +16,29 @@ public partial class ScoutingPage : ContentPage
 		TeamNumberLabel.Text = "Team Num: " + match.teamNumber;
         LoadPage();
     }
+
     private void LoadPage()
 	{
+        //ObservableCollection<object> cityName = new ObservableCollection<object>();
+        //cityName.Add("Chennai");
+        //cityName.Add("Mumbai");
+        //cityName.Add("Delhi");
+        //cityName.Add("Kolkata");
+        //cityName.Add("Bangalore");
+        //cityName.Add("Hyderabad");
+        //cityName.Add("Pune");
+        //cityName.Add("Ahmedabad");
+        //cityName.Add("Jaipur");
+        //cityName.Add("Lucknow");
+        //cityName.Add("Chandigarh");
+        //PickerColumn pickerColumn = new PickerColumn()
+        //{
+        //    HeaderText = "Select City",
+        //    ItemsSource = cityName,
+        //    SelectedIndex = 1,
+        //};
+        //this.picker.Columns.Add(pickerColumn);
+
         // Name all the autonomous trackables
         auto1Label.Text = parser.GetItemById("Auto0");
         auto2Label.Text = parser.GetItemById("Auto1");
@@ -33,7 +56,7 @@ public partial class ScoutingPage : ContentPage
         teleop6Label.Text = parser.GetItemById("Teleop5");
 
         // Determine visibility of autonomous trackables and their respective labels
-        auto1.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto0Hide"));
+       // auto1.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto0Hide"));
         auto1Label.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto0Hide"));
         auto2.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto1Hide"));
         auto2Label.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto1Hide"));
@@ -61,11 +84,6 @@ public partial class ScoutingPage : ContentPage
         teleop6Label.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop5Hide"));
 
         // Get ready from stupid stupid code
-
-        foreach(var i in GetFill("Auto0Items"))
-        {
-            auto1.Items.Add(i);
-        }
 
         foreach (var i in GetFill("Auto1Items"))
         {

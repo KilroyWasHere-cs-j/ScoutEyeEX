@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
              x:Class="SE.ScoutingPage"
              Title="Scouting Page">
+
+
     <StackLayout>
         <Label 
             x:Name="WelcomeMessageLabel"
@@ -79,11 +82,19 @@
                                FontSize="18"
                                FontAttributes="Bold"/>
 
-                        <Picker x:Name="auto1"
-                                Title=""
-                                IsVisible="true"
-                                TextColor="Black"
-                                FontSize="14"/>
+                        <picker:SfPicker x:Name="uto1"
+                                         HeightRequest="280" 
+                                         WidthRequest="300">
+                            <picker:SfPicker.HeaderView>
+                                <picker:PickerHeaderView Text="Select a color" Height="40" />
+                            </picker:SfPicker.HeaderView>
+                            <picker:SfPicker.FooterView>
+                                <picker:PickerFooterView ShowOkButton="True" Height="40" />
+                            </picker:SfPicker.FooterView>
+                            <picker:SfPicker.Columns>
+                                <picker:PickerColumn ItemsSource="{Binding auto1DS}" />
+                            </picker:SfPicker.Columns>
+                        </picker:SfPicker>
 
                         <Label x:Name="auto2Label"
                                  Text="0"
