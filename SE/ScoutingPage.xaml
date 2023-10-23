@@ -88,9 +88,6 @@
                             <picker:SfPicker.HeaderView>
                                 <picker:PickerHeaderView Text="Select a option" Height="40" />
                             </picker:SfPicker.HeaderView>
-                            <picker:SfPicker.Columns>
-                                <picker:PickerColumn ItemsSource="{Binding auto1DS}" />
-                            </picker:SfPicker.Columns>
                         </picker:SfPicker>
 
                         <Label x:Name="auto2Label"
@@ -105,9 +102,6 @@
                             <picker:SfPicker.HeaderView>
                                 <picker:PickerHeaderView Text="Select a option" Height="40" />
                             </picker:SfPicker.HeaderView>
-                            <picker:SfPicker.Columns>
-                                <picker:PickerColumn HeaderText="Colors" ItemsSource="{Binding auto1DS}" />
-                            </picker:SfPicker.Columns>
                         </picker:SfPicker>
 
                         <Label x:Name="auto3Label"
@@ -122,9 +116,6 @@
                             <picker:SfPicker.HeaderView>
                                 <picker:PickerHeaderView Text="Select a option" Height="40" />
                             </picker:SfPicker.HeaderView>
-                            <picker:SfPicker.Columns>
-                                <picker:PickerColumn HeaderText="Colors" ItemsSource="{Binding auto1DS}" />
-                            </picker:SfPicker.Columns>
                         </picker:SfPicker>
 
                         <Label x:Name="auto4Label"
@@ -139,9 +130,6 @@
                             <picker:SfPicker.HeaderView>
                                 <picker:PickerHeaderView Text="Select a option" Height="40" />
                             </picker:SfPicker.HeaderView>
-                            <picker:SfPicker.Columns>
-                                <picker:PickerColumn HeaderText="Colors" ItemsSource="{Binding auto1DS}" />
-                            </picker:SfPicker.Columns>
                         </picker:SfPicker>
 
                         <Label x:Name="auto5Label"
@@ -156,9 +144,6 @@
                             <picker:SfPicker.HeaderView>
                                 <picker:PickerHeaderView Text="Select a option" Height="40" />
                             </picker:SfPicker.HeaderView>
-                            <picker:SfPicker.Columns>
-                                <picker:PickerColumn HeaderText="Colors" ItemsSource="{Binding auto1DS}" />
-                            </picker:SfPicker.Columns>
                         </picker:SfPicker>
 
                         <Label x:Name="auto6Label"
@@ -173,9 +158,6 @@
                             <picker:SfPicker.HeaderView>
                                 <picker:PickerHeaderView Text="Select a option" Height="40" />
                             </picker:SfPicker.HeaderView>
-                            <picker:SfPicker.Columns>
-                                <picker:PickerColumn HeaderText="Colors" ItemsSource="{Binding auto1DS}" />
-                            </picker:SfPicker.Columns>
                         </picker:SfPicker>
                     </VerticalStackLayout>
                 </Border>
@@ -205,11 +187,13 @@
                                  FontSize="18"
                                  FontAttributes="Bold"/>
 
-                        <Picker x:Name="teleop1"
-                                Title=""
-                                IsVisible="true"
-                                TextColor="Black"
-                                FontSize="14"/>
+                        <picker:SfPicker x:Name="teleop1"
+                                         HeightRequest="80" 
+                                         WidthRequest="300">
+                            <picker:SfPicker.HeaderView>
+                                <picker:PickerHeaderView Text="Select a option" Height="40" />
+                            </picker:SfPicker.HeaderView>
+                        </picker:SfPicker>
 
                         <Label x:Name="teleop2Label"
                                  Text="0"
@@ -217,11 +201,13 @@
                                  FontSize="18"
                                  FontAttributes="Bold"/>
 
-                        <Picker x:Name="teleop2"
-                                Title=""
-                                IsVisible="true"
-                                TextColor="Black"
-                                FontSize="14"/>
+                        <picker:SfPicker x:Name="teleop2"
+                  HeightRequest="80" 
+                  WidthRequest="300">
+                            <picker:SfPicker.HeaderView>
+                                <picker:PickerHeaderView Text="Select a option" Height="40" />
+                            </picker:SfPicker.HeaderView>
+                        </picker:SfPicker>
 
                         <Label x:Name="teleop3Label"
                                  Text="0"
@@ -229,11 +215,13 @@
                                  FontSize="18"
                                  FontAttributes="Bold"/>
 
-                        <Picker x:Name="teleop3"
-                                Title=""
-                                IsVisible="true"
-                                TextColor="Black"
-                                FontSize="14"/>
+                        <picker:SfPicker x:Name="teleop3"
+                  HeightRequest="80" 
+                  WidthRequest="300">
+                            <picker:SfPicker.HeaderView>
+                                <picker:PickerHeaderView Text="Select a option" Height="40" />
+                            </picker:SfPicker.HeaderView>
+                        </picker:SfPicker>
 
                         <Label x:Name="teleop4Label"
                                     Text="0"
@@ -241,11 +229,13 @@
                                     FontSize="18"
                                     FontAttributes="Bold"/>
 
-                        <Picker x:Name="teleop4"
-                                Title=""
-                                IsVisible="true"
-                                TextColor="Black"
-                                FontSize="14"/>
+                        <picker:SfPicker x:Name="teleop4"
+                  HeightRequest="80" 
+                  WidthRequest="300">
+                            <picker:SfPicker.HeaderView>
+                                <picker:PickerHeaderView Text="Select a option" Height="40" />
+                            </picker:SfPicker.HeaderView>
+                        </picker:SfPicker>
 
                         <Label x:Name="teleop5Label"
                                     Text="0"
@@ -253,11 +243,13 @@
                                     FontSize="18"
                                     FontAttributes="Bold"/>
 
-                        <Picker x:Name="teleop5"
-                                Title=""
-                                IsVisible="true"
-                                TextColor="Black"
-                                FontSize="14"/>
+                        <picker:SfPicker x:Name="teleop5"
+                  HeightRequest="80" 
+                  WidthRequest="300">
+                            <picker:SfPicker.HeaderView>
+                                <picker:PickerHeaderView Text="Select a option" Height="40" />
+                            </picker:SfPicker.HeaderView>
+                        </picker:SfPicker>
 
                         <Label x:Name="teleop6Label"
                                     Text="0"
@@ -265,11 +257,13 @@
                                     FontSize="18"
                                     FontAttributes="Bold"/>
 
-                        <Picker x:Name="teleop6"
-                                Title=""
-                                IsVisible="true"
-                                TextColor="Black"
-                                FontSize="14"/>
+                        <picker:SfPicker x:Name="teleop6"
+                  HeightRequest="80" 
+                  WidthRequest="300">
+                            <picker:SfPicker.HeaderView>
+                                <picker:PickerHeaderView Text="Select a option" Height="40" />
+                            </picker:SfPicker.HeaderView>
+                        </picker:SfPicker>
 
                     </VerticalStackLayout>
                 </Border>
