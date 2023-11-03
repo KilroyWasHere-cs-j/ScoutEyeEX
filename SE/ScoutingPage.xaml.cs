@@ -16,7 +16,7 @@ public partial class ScoutingPage : ContentPage
         LoadPage();
     }
     private void LoadPage()
-	{
+    {
         // Name all the autonomous trackables
         auto1Label.Text = parser.GetItemById("Auto0");
         auto2Label.Text = parser.GetItemById("Auto1");
@@ -99,6 +99,16 @@ public partial class ScoutingPage : ContentPage
         teleop5.SelectedIndex = 1;
         teleop6.SelectedIndex = 1;
 
+        for (int i = 0; i <= 5; i++)
+        {
+            givesDef.Items.Add(i.ToString());
+            takesDef.Items.Add(i.ToString());
+        }
+
+        for (int i = 0; i <= 10; i++)
+        {
+            robotSpeed.Items.Add(i.ToString());
+        }
         // Get ready from stupid stupid code
 
         foreach(var i in GetFill("Auto0Items"))
@@ -278,6 +288,46 @@ public partial class ScoutingPage : ContentPage
         {
             match.teleop6 = "0";
         }
+        try
+        {
+            match.robotSpeed = Convert.ToInt32(robotSpeed.SelectedItem.ToString());
+        }
+        catch
+        {
+            match.robotSpeed = 0;
+        }
+        try
+        {
+            match.givesDefense = Convert.ToInt32(givesDef.SelectedItem.ToString());
+        }
+        catch
+        {
+            match.givesDefense = 0;
+        }
+        try
+        {
+            match.takesDefense = Convert.ToInt32(takesDef.SelectedItem.ToString());
+        }
+        catch
+        {
+            match.takesDefense = 0;
+        }
+        try
+        {
+            match.robotDied = Convert.ToBoolean(robotDied.IsChecked);
+        }
+        catch
+        {
+            match.robotDied = false;
+        }
+        try
+        {
+            match.fieldFault = Convert.ToBoolean(fieldFault.IsChecked);
+        }
+        catch
+        {
+            match.fieldFault = false;
+        }
         await Navigation.PushAsync(new QRPage(match));
     }
 
@@ -308,6 +358,33 @@ public partial class ScoutingPage : ContentPage
         teleop4Stepper.Value = 0;
         teleop5Stepper.Value = 0;
         teleop6Stepper.Value = 0;
+
+        robotSpeed.SelectedIndex = 0;
+        givesDef.SelectedIndex = 0;
+        takesDef.SelectedIndex = 0;
+
+        robotDied.IsChecked = false;
+        fieldFault.IsChecked = false;
+
+        match.auto1 = "0";
+        match.auto2 = "0";
+        match.auto3 = "0";
+        match.auto4 = "0";
+        match.auto5 = "0";
+        match.auto6 = "0";
+        match.teleop1 = "0";
+        match.teleop2 = "0";
+        match.teleop3 = "0";
+        match.teleop4 = "0";
+        match.teleop5 = "0";
+        match.teleop6 = "0";
+
+        match.robotSpeed = 0;
+        match.givesDefense = 0;
+        match.takesDefense = 0;
+
+        match.robotDied = false;
+        match.fieldFault = false;
     }
 
     #region EventHandlers

@@ -5,6 +5,7 @@
         public string scoutName;
         public int matchNumber;
         public int teamNumber;
+
         public bool isBlue;
 
         public string auto1;
@@ -20,7 +21,7 @@
         public string teleop5;
         public string teleop6;
 
-        public string robotSpeed;
+        public int robotSpeed;
         public int givesDefense;
         public int takesDefense;
 

@@ -22,8 +22,7 @@
                 HeightRequest="50"
                 MaximumHeightRequest="60"
                 MaximumWidthRequest="160"/>
-        
-        
 
+        <Label x:Name="OutputLabel"/>
     </VerticalStackLayout>
 </ContentPage>

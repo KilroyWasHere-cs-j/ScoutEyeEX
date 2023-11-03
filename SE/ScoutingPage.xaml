@@ -29,6 +29,13 @@
             </Border>
         </HorizontalStackLayout>
 
+        <HorizontalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <Label x:Name="robotDiedLabel" Text="Robot Died" VerticalOptions="Center" />
+            <CheckBox x:Name="robotDied" Margin="5"/>
+            <Label x:Name="fieldFaultLabel" Text="Field Fault" VerticalOptions="Center" />
+            <CheckBox x:Name="fieldFault" Margin="5"/>
+        </HorizontalStackLayout>
+
         <ScrollView x:Name="scrollView"
             VerticalOptions="FillAndExpand"
             VerticalScrollBarVisibility="Always">
@@ -273,6 +280,25 @@
                             Increment="1"
                             HorizontalOptions="Center"
                             ValueChanged="Teleop6StepChanged"/>
+
+                        <HorizontalStackLayout HorizontalOptions="Center">
+                            <Picker x:Name="givesDef"
+                                    IsVisible="true"
+                                    TextColor="Black"
+                                    FontSize="14"/>
+
+                            <Picker x:Name="takesDef"
+                                    IsVisible="true"
+                                    TextColor="Black"
+                                    FontSize="14"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout HorizontalOptions="Center">
+                            <Picker x:Name="robotSpeed"
+                                    IsVisible="true"
+                                    TextColor="Black"
+                                    FontSize="14"/>
+                        </HorizontalStackLayout>
 
                     </VerticalStackLayout>
                 </Border>
