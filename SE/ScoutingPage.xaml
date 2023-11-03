@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
              x:Class="SE.ScoutingPage"
              Title="Scouting Page">
+
+
     <StackLayout>
         <Label 
             x:Name="WelcomeMessageLabel"
@@ -67,8 +70,8 @@
                         Background="White"
                         Padding="16,8"
                         HorizontalOptions="Center"
-                        WidthRequest="210"
-                        MaximumWidthRequest="220">
+                        WidthRequest="230"
+                        MaximumWidthRequest="240">
                     <VerticalStackLayout
                         HorizontalOptions="Center">
                         <Label x:Name="AutoSectionLabel"
@@ -195,7 +198,7 @@
                                  TextDecorations="Underline"
                                  FontSize="18"
                                  FontAttributes="Bold"/>
-
+                      
                         <Picker x:Name="teleop1"
                                 IsVisible="true"
                                 TextColor="Black"
