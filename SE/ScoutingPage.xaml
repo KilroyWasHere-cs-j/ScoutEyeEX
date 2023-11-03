@@ -32,6 +32,13 @@
             </Border>
         </HorizontalStackLayout>
 
+        <HorizontalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <Label x:Name="robotDiedLabel" Text="Robot Died" VerticalOptions="Center" />
+            <CheckBox x:Name="robotDied" Margin="5"/>
+            <Label x:Name="fieldFaultLabel" Text="Field Fault" VerticalOptions="Center" />
+            <CheckBox x:Name="fieldFault" Margin="5"/>
+        </HorizontalStackLayout>
+
         <ScrollView x:Name="scrollView"
             VerticalOptions="FillAndExpand"
             VerticalScrollBarVisibility="Always">
@@ -49,10 +56,10 @@
                         Margin="0,0,0,0"/>
 
                     <Button
-                        x:Name="Clear"
+                        x:Name="ClearMatchButton"
                         VerticalOptions="Center" 
                         HorizontalOptions="Center"
-                        Clicked="OnClearClicked"
+                        Clicked="OnResetClicked"
                         Text="Clear"
                         Margin="10,0,0,0"/>
                 </HorizontalStackLayout>
@@ -77,88 +84,94 @@
                                Margin="20"/>
 
                         <Label x:Name="auto1Label"
-                               Text="0"
                                TextDecorations="Underline"
                                FontSize="18"
                                FontAttributes="Bold"/>
 
-                        <picker:SfPicker x:Name="auto1"
-                                         HeightRequest="80" 
-                                         WidthRequest="300">
-                            <picker:SfPicker.HeaderView>
-                                <picker:PickerHeaderView Text="Select a option" Height="40" />
-                            </picker:SfPicker.HeaderView>
-                        </picker:SfPicker>
+                        <Picker x:Name="auto1"
+                                IsVisible="true"
+                                TextColor="Black"
+                                FontSize="14"/>
+
+                        <Stepper x:Name="auto1Stepper" Minimum="0" Maximum="1000"
+                                 Increment="1"
+                                 HorizontalOptions="Center"
+                                 ValueChanged="Auto1StepChanged"/>
 
                         <Label x:Name="auto2Label"
-                                 Text="0"
                                  TextDecorations="Underline"
                                  FontSize="18"
                                  FontAttributes="Bold"/>
 
-                        <picker:SfPicker x:Name="auto2"
-                                         HeightRequest="80" 
-                                         WidthRequest="300">
-                            <picker:SfPicker.HeaderView>
-                                <picker:PickerHeaderView Text="Select a option" Height="40" />
-                            </picker:SfPicker.HeaderView>
-                        </picker:SfPicker>
+                        <Picker x:Name="auto2"
+                                IsVisible="true"
+                                TextColor="Black"
+                                FontSize="14"/>
+
+                        <Stepper x:Name="auto2Stepper" Minimum="0" Maximum="1000"
+                            Increment="1"
+                            HorizontalOptions="Center"
+                            ValueChanged="Auto2StepChanged"/>
 
                         <Label x:Name="auto3Label"
-                                 Text="0"
                                  TextDecorations="Underline"
                                  FontSize="18"
                                  FontAttributes="Bold"/>
 
-                        <picker:SfPicker x:Name="auto3"
-                 HeightRequest="80" 
-                 WidthRequest="300">
-                            <picker:SfPicker.HeaderView>
-                                <picker:PickerHeaderView Text="Select a option" Height="40" />
-                            </picker:SfPicker.HeaderView>
-                        </picker:SfPicker>
+                        <Picker x:Name="auto3"
+                                FontSize="14"
+                                IsVisible="true"
+                                TextColor="Black"/>
+
+                        <Stepper x:Name="auto3Stepper" Minimum="0" Maximum="1000"
+                            Increment="1"
+                            HorizontalOptions="Center"
+                            ValueChanged="Auto3StepChanged"/>
 
                         <Label x:Name="auto4Label"
-                                    Text="0"
                                     TextDecorations="Underline"
                                     FontSize="18"
                                     FontAttributes="Bold"/>
 
-                        <picker:SfPicker x:Name="auto4"
-                 HeightRequest="80" 
-                 WidthRequest="300">
-                            <picker:SfPicker.HeaderView>
-                                <picker:PickerHeaderView Text="Select a option" Height="40" />
-                            </picker:SfPicker.HeaderView>
-                        </picker:SfPicker>
+                        <Picker x:Name="auto4"
+                                FontSize="14"
+                                IsVisible="true"
+                                TextColor="Black"/>
+
+                        <Stepper x:Name="auto4Stepper" Minimum="0" Maximum="1000"
+                            Increment="1"
+                            HorizontalOptions="Center"
+                            ValueChanged="Auto4StepChanged"/>
 
                         <Label x:Name="auto5Label"
-                                    Text="0"
                                     TextDecorations="Underline"
                                     FontSize="18"
                                     FontAttributes="Bold"/>
 
-                        <picker:SfPicker x:Name="auto5"
-                 HeightRequest="80" 
-                 WidthRequest="300">
-                            <picker:SfPicker.HeaderView>
-                                <picker:PickerHeaderView Text="Select a option" Height="40" />
-                            </picker:SfPicker.HeaderView>
-                        </picker:SfPicker>
+                        <Picker x:Name="auto5"
+                                IsVisible="true"
+                                TextColor="Black"
+                                FontSize="14"/>
+
+                        <Stepper x:Name="auto5Stepper" Minimum="0" Maximum="1000"
+                            Increment="1"
+                            HorizontalOptions="Center"
+                            ValueChanged="Auto5StepChanged"/>
 
                         <Label x:Name="auto6Label"
-                                    Text="0"
                                     TextDecorations="Underline"
                                     FontSize="18"
                                     FontAttributes="Bold"/>
 
-                        <picker:SfPicker x:Name="auto6"
-                 HeightRequest="80" 
-                 WidthRequest="300">
-                            <picker:SfPicker.HeaderView>
-                                <picker:PickerHeaderView Text="Select a option" Height="40" />
-                            </picker:SfPicker.HeaderView>
-                        </picker:SfPicker>
+                        <Picker x:Name="auto6"
+                                IsVisible="true"
+                                TextColor="Black"
+                                FontSize="14"/>
+
+                        <Stepper x:Name="auto6Stepper" Minimum="0" Maximum="1000"
+                            Increment="1"
+                            HorizontalOptions="Center"
+                            ValueChanged="Auto6StepChanged"/>
                     </VerticalStackLayout>
                 </Border>
 
@@ -182,88 +195,113 @@
                                Margin="15"/>
 
                         <Label x:Name="teleop1Label"
-                                 Text="0"
                                  TextDecorations="Underline"
                                  FontSize="18"
                                  FontAttributes="Bold"/>
+                      
+                        <Picker x:Name="teleop1"
+                                IsVisible="true"
+                                TextColor="Black"
+                                FontSize="14"/>
 
-                        <picker:SfPicker x:Name="teleop1"
-                                         HeightRequest="80" 
-                                         WidthRequest="300">
-                            <picker:SfPicker.HeaderView>
-                                <picker:PickerHeaderView Text="Select a option" Height="40" />
-                            </picker:SfPicker.HeaderView>
-                        </picker:SfPicker>
+                        <Stepper x:Name="teleop1Stepper" Minimum="0" Maximum="1000"
+                            Increment="1"
+                            HorizontalOptions="Center"
+                            ValueChanged="Teleop1StepChanged"/>
 
                         <Label x:Name="teleop2Label"
-                                 Text="0"
                                  TextDecorations="Underline"
                                  FontSize="18"
                                  FontAttributes="Bold"/>
 
-                        <picker:SfPicker x:Name="teleop2"
-                  HeightRequest="80" 
-                  WidthRequest="300">
-                            <picker:SfPicker.HeaderView>
-                                <picker:PickerHeaderView Text="Select a option" Height="40" />
-                            </picker:SfPicker.HeaderView>
-                        </picker:SfPicker>
+                        <Picker x:Name="teleop2"
+                                IsVisible="true"
+                                TextColor="Black"
+                                FontSize="14"/>
+
+                        <Stepper x:Name="teleop2Stepper" Minimum="0" Maximum="1000"
+                            Increment="1"
+                            HorizontalOptions="Center"
+                            ValueChanged="Teleop2StepChanged"/>
 
                         <Label x:Name="teleop3Label"
-                                 Text="0"
                                  TextDecorations="Underline"
                                  FontSize="18"
                                  FontAttributes="Bold"/>
 
-                        <picker:SfPicker x:Name="teleop3"
-                  HeightRequest="80" 
-                  WidthRequest="300">
-                            <picker:SfPicker.HeaderView>
-                                <picker:PickerHeaderView Text="Select a option" Height="40" />
-                            </picker:SfPicker.HeaderView>
-                        </picker:SfPicker>
+                        <Picker x:Name="teleop3"
+                                IsVisible="true"
+                                TextColor="Black"
+                                FontSize="14"/>
+
+                        <Stepper x:Name="teleop3Stepper" Minimum="0" Maximum="1000"
+                            Increment="1"
+                            HorizontalOptions="Center"
+                            ValueChanged="Teleop3StepChanged"/>
 
                         <Label x:Name="teleop4Label"
-                                    Text="0"
                                     TextDecorations="Underline"
                                     FontSize="18"
                                     FontAttributes="Bold"/>
 
-                        <picker:SfPicker x:Name="teleop4"
-                  HeightRequest="80" 
-                  WidthRequest="300">
-                            <picker:SfPicker.HeaderView>
-                                <picker:PickerHeaderView Text="Select a option" Height="40" />
-                            </picker:SfPicker.HeaderView>
-                        </picker:SfPicker>
+                        <Picker x:Name="teleop4"
+                                IsVisible="true"
+                                TextColor="Black"
+                                FontSize="14"/>
+
+                        <Stepper x:Name="teleop4Stepper" Minimum="0" Maximum="1000"
+                            Increment="1"
+                            HorizontalOptions="Center"
+                            ValueChanged="Teleop4StepChanged"/>
 
                         <Label x:Name="teleop5Label"
-                                    Text="0"
                                     TextDecorations="Underline"
                                     FontSize="18"
                                     FontAttributes="Bold"/>
 
-                        <picker:SfPicker x:Name="teleop5"
-                  HeightRequest="80" 
-                  WidthRequest="300">
-                            <picker:SfPicker.HeaderView>
-                                <picker:PickerHeaderView Text="Select a option" Height="40" />
-                            </picker:SfPicker.HeaderView>
-                        </picker:SfPicker>
+                        <Picker x:Name="teleop5"
+                                IsVisible="true"
+                                TextColor="Black"
+                                FontSize="14"/>
+
+                        <Stepper x:Name="teleop5Stepper" Minimum="0" Maximum="1000"
+                            Increment="1"
+                            HorizontalOptions="Center"
+                            ValueChanged="Teleop5StepChanged"/>
 
                         <Label x:Name="teleop6Label"
-                                    Text="0"
                                     TextDecorations="Underline"
                                     FontSize="18"
                                     FontAttributes="Bold"/>
 
-                        <picker:SfPicker x:Name="teleop6"
-                  HeightRequest="80" 
-                  WidthRequest="300">
-                            <picker:SfPicker.HeaderView>
-                                <picker:PickerHeaderView Text="Select a option" Height="40" />
-                            </picker:SfPicker.HeaderView>
-                        </picker:SfPicker>
+                        <Picker x:Name="teleop6"
+                                IsVisible="true"
+                                TextColor="Black"
+                                FontSize="14"/>
+
+                        <Stepper x:Name="teleop6Stepper" Minimum="0" Maximum="1000"
+                            Increment="1"
+                            HorizontalOptions="Center"
+                            ValueChanged="Teleop6StepChanged"/>
+
+                        <HorizontalStackLayout HorizontalOptions="Center">
+                            <Picker x:Name="givesDef"
+                                    IsVisible="true"
+                                    TextColor="Black"
+                                    FontSize="14"/>
+
+                            <Picker x:Name="takesDef"
+                                    IsVisible="true"
+                                    TextColor="Black"
+                                    FontSize="14"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout HorizontalOptions="Center">
+                            <Picker x:Name="robotSpeed"
+                                    IsVisible="true"
+                                    TextColor="Black"
+                                    FontSize="14"/>
+                        </HorizontalStackLayout>
 
                     </VerticalStackLayout>
                 </Border>

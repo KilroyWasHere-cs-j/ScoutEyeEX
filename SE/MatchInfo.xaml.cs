@@ -2,7 +2,7 @@ namespace SE;
 
 public partial class MatchInfo : ContentPage
 {
-	Match match;
+	private Match match;
 	public MatchInfo(string scoutName)
 	{
 		InitializeComponent();

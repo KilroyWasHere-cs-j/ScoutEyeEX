@@ -4,7 +4,7 @@ namespace SE
 {
     public class XMLParser
     {
-        XmlDocument xmlDoc;
+        private XmlDocument xmlDoc;
         public XMLParser()
         {
             xmlDoc = new XmlDocument();
