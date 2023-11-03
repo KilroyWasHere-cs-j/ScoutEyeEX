@@ -13,12 +13,12 @@
         public string auto4;
         public string auto5;
         public string auto6;
-        public string telop1;
-        public string telop2;
-        public string telop3;
-        public string telop4;
-        public string telop5;
-        public string telop6;
+        public string teleop1;
+        public string teleop2;
+        public string teleop3;
+        public string teleop4;
+        public string teleop5;
+        public string teleop6;
 
         public string robotSpeed;
         public int givesDefense;

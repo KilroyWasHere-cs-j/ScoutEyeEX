@@ -15,7 +15,7 @@
 		<ApplicationTitle>ScoutEyeEX</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.se</ApplicationId>
+		<ApplicationId>scouteye</ApplicationId>
 		<ApplicationIdGuid>77c8b9d2-48bc-481f-8bda-4d85dc20bc5d</ApplicationIdGuid>
 
 		<!-- Versions -->

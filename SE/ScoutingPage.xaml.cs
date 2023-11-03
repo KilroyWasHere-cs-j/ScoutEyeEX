@@ -73,6 +73,32 @@ public partial class ScoutingPage : ContentPage
         teleop6Label.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop5Hide"));
         teleop6Stepper.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop5Hide"));
 
+        auto1Stepper.Value = 1;
+        auto2Stepper.Value = 1;
+        auto3Stepper.Value = 1;
+        auto4Stepper.Value = 1;
+        auto5Stepper.Value = 1;
+        auto6Stepper.Value = 1;
+        teleop1Stepper.Value = 1;
+        teleop2Stepper.Value = 1;
+        teleop3Stepper.Value = 1;
+        teleop4Stepper.Value = 1;
+        teleop5Stepper.Value = 1;
+        teleop6Stepper.Value = 1;
+
+        auto1.SelectedIndex = 1;
+        auto2.SelectedIndex = 1;
+        auto3.SelectedIndex = 1;
+        auto4.SelectedIndex = 1;
+        auto5.SelectedIndex = 1;
+        auto6.SelectedIndex = 1;
+        teleop1.SelectedIndex = 1;
+        teleop2.SelectedIndex = 1;
+        teleop3.SelectedIndex = 1;
+        teleop4.SelectedIndex = 1;
+        teleop5.SelectedIndex = 1;
+        teleop6.SelectedIndex = 1;
+
         // Get ready from stupid stupid code
 
         foreach(var i in GetFill("Auto0Items"))
@@ -154,7 +180,108 @@ public partial class ScoutingPage : ContentPage
         }
     }
 
-    private void Clear()
+    private async void LogMatch()
+    {
+        try
+        {
+            match.auto1 = auto1.SelectedItem.ToString();
+        }
+        catch
+        {
+            match.auto1 = "0";
+        }
+        try
+        {
+            match.auto2 = auto2.SelectedItem.ToString();
+        }
+        catch
+        {
+            match.auto2 = "0";
+        }
+        try
+        {
+            match.auto3 = auto3.SelectedItem.ToString();
+        }
+        catch
+        {
+            match.auto3 = "0";
+        }
+        try
+        {
+            match.auto4 = auto4.SelectedItem.ToString();
+        }
+        catch
+        {
+            match.auto4 = "0";
+        }
+        try
+        {
+            match.auto5 = auto5.SelectedItem.ToString();
+        }
+        catch
+        {
+            match.auto5 = "0";
+        }
+        try
+        {
+            match.auto6 = auto6.SelectedItem.ToString();
+        }
+        catch
+        {
+            match.auto6 = "0";
+        }
+        try
+        {
+            match.teleop1 = teleop1.SelectedItem.ToString();
+        }
+        catch
+        {
+            match.teleop1 = "0";
+        }
+        try
+        {
+            match.teleop2 = teleop2.SelectedItem.ToString();
+        }
+        catch
+        {
+            match.teleop2 = "0";
+        }
+        try
+        {
+            match.teleop3 = teleop3.SelectedItem.ToString();
+        }
+        catch
+        {
+            match.teleop3 = "0";
+        }
+        try
+        {
+            match.teleop4 = teleop4.SelectedItem.ToString();
+        }
+        catch
+        {
+            match.teleop4 = "0";
+        }
+        try
+        {
+            match.teleop5 = teleop5.SelectedItem.ToString();
+        }
+        catch
+        {
+            match.teleop5 = "0";
+        }
+        try
+        {
+            match.teleop6 = teleop6.SelectedItem.ToString();
+        }
+        catch
+        {
+            match.teleop6 = "0";
+        }
+        await Navigation.PushAsync(new QRPage(match));
+    }
+
+    private void ClearMatch()
     {
         auto1.SelectedIndex = 0;
         auto2.SelectedIndex = 0;
@@ -190,7 +317,7 @@ public partial class ScoutingPage : ContentPage
         switch (response)
         {
             case true:
-                await Navigation.PushAsync(new QRPage(match));
+                LogMatch();
                 break;
             case false:
                 break;
@@ -203,7 +330,7 @@ public partial class ScoutingPage : ContentPage
         switch (response)
         {
             case true:
-                Clear();  
+                ClearMatch();  
                 break;
             case false:
                 break;
