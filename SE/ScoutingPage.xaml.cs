@@ -1,8 +1,5 @@
 namespace SE;
 
-using Syncfusion.Maui.Picker;
-using System.Collections.ObjectModel;
-
 public partial class ScoutingPage : ContentPage
 {
     private Match match;
