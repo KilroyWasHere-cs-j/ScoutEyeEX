@@ -21,61 +21,6 @@ public partial class ScoutingPage : ContentPage
 
     private void LoadPage()
     {
-        List<string> trackables = new List<string> { "Auto0", "Auto1", "Auto2", "Auto3", "Auto4", "Auto5", "Teleop0", "Teleop1", "Teleop2", "Teleop3", "Teleop4", "Teleop5"};
-
-        foreach(var trackable in trackables)
-        {
-            ObservableCollection<object> data = new ObservableCollection<object>();
-            foreach (var i in GetFill(trackable + "Items"))
-            {
-                data.Add(i);
-            }
-            PickerColumn pickerColumn = new PickerColumn()
-            {
-                HeaderText = "Peaches",
-                ItemsSource = data,
-                SelectedIndex = 0,
-            };
-            switch (trackable)
-            {
-                case "auto0":
-                    this.auto1.Columns.Add(pickerColumn);
-                    break;
-                case "auto1":
-                    this.auto2.Columns.Add(pickerColumn);
-                    break;
-                case "auto2":
-                    this.auto3.Columns.Add(pickerColumn);
-                    break;
-                case "auto3":
-                    this.auto4.Columns.Add(pickerColumn);
-                    break;
-                case "auto4":
-                    this.auto5.Columns.Add(pickerColumn);
-                    break;
-                case "auto5":
-                    this.auto6.Columns.Add(pickerColumn);
-                    break;
-                case "teleop0":
-                    this.teleop1.Columns.Add(pickerColumn);
-                    break;
-                case "teleop1":
-                    this.teleop2.Columns.Add(pickerColumn);
-                    break;
-                case "teleop2":
-                    this.teleop3.Columns.Add(pickerColumn);
-                    break;
-                case "teleop3":
-                    this.teleop4.Columns.Add(pickerColumn);
-                    break;
-                case "teleop4":
-                    this.teleop5.Columns.Add(pickerColumn);
-                    break;
-                case "teleop5":
-                    this.teleop6.Columns.Add(pickerColumn);
-                    break;
-            }
-        }
         // Name all the autonomous trackables
         auto1Label.Text = parser.GetItemById("Auto0");
         auto2Label.Text = parser.GetItemById("Auto1");
@@ -445,14 +390,11 @@ public partial class ScoutingPage : ContentPage
 
         match.robotDied = false;
         match.fieldFault = false;
+    }
 
     private void Dump()
     {
-        this.auto1.Columns.Clear();
-        this.auto2.Columns.Clear();
-        this.auto3.Columns.Clear();
-        this.auto4.Columns.Clear();
-        this.auto5.Columns.Clear();
+
 
         LoadPage();
         DisplayAlert("Alert", "UI cleared", "OK");
