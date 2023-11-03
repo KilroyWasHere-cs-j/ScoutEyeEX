@@ -5,7 +5,7 @@ public partial class MainPage : ContentPage
     private XMLParser parser;
     private Match match;
     private int clickCount = 0;
-    private int unlockNumber = 1;
+    private int unlockNumber = 3;
 
 	public MainPage()
 	{
