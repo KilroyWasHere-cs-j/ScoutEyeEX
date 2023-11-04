@@ -33,7 +33,7 @@ public partial class MainPage : ContentPage
     {
         if(clickCount == unlockNumber)
         {
-            match.scoutName = "Honey Thief";
+            match.scoutName = "Frau Blucher";
             match.matchNumber = 0;
             match.teamNumber = 5687;
 
@@ -42,6 +42,21 @@ public partial class MainPage : ContentPage
         else
         {
             clickCount++;
+        }
+    }
+
+    private async void OnToDevClicked(object sender, EventArgs e)
+    {
+        try
+        {
+            if (ScoutNameEntry.Text.Contains("Honey Thief"))
+            {
+                await Navigation.PushAsync(new DevPage());
+            }
+        }
+        catch
+        {
+            await Navigation.PushAsync(new DummyPage());
         }
     }
 

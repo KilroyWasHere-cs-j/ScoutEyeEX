@@ -68,6 +68,7 @@
                 </StackLayout>
             </Border>
 
+            <Button x:Name="DevButton" Text="To Dev Page" Clicked="OnToDevClicked"/>
         </VerticalStackLayout>
     </ScrollView>
 
