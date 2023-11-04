@@ -18,8 +18,7 @@ public partial class QRPage : ContentPage
 
 	public void GenerateQR()
 	{
-        string qr_content = "ScoutEyeEX" + "\t" + match.scoutName + "\t" + match.matchNumber + "\t"  + match.teamNumber + "\t"  + match.isBlue + "\t" + match.auto1 + "\t" + match.auto2 + "\t" + match.auto3 + "\t" + match.auto4 + "\t" + match.auto5 + "\t" + match.auto6 + "\t" + match.teleop1 + "\t" + match.teleop2 + "\t" + match.teleop3 + "\t" + match.teleop4 + "\t" + match.teleop5 + "\t" + match.teleop6 + "\t" + match.robotSpeed + "\t" + match.givesDefense + "\t" + match.takesDefense + "\t" + match.robotDied + "\t" + match.fieldFault + "\t" + match.TimeSpan;
-        OutputLabel.Text = qr_content;
+        string qr_content = match.scoutName + "\t" + "EX" + "\t" + match.matchNumber + "\t" + match.isBlue + "\t" + match.teamNumber + "\t" + match.auto1 + "\t" + match.auto2 + "\t" + match.auto3 + "\t" + match.auto4 + "\t" + match.auto5 + "\t" + match.auto6 + "\t" + match.teleop1 + "\t" + match.teleop2 + "\t" + match.teleop3 + "\t" + match.teleop4 + "\t" + match.teleop5 + "\t" + match.teleop6 + "\t" + match.robotDied + "\t" + match.fieldFault + "\t" + "00:00:00" + "\t" + "00" + "\t" + match.robotSpeed + "\t" + match.givesDefense + "\t" + match.takesDefense + "\t" + "EX";     
         qrGenerator = new QRCodeGenerator();
         qrCodeData = qrGenerator.CreateQrCode(qr_content, QRCodeGenerator.ECCLevel.L);
         qRCode = new PngByteQRCode(qrCodeData);
