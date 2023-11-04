@@ -70,8 +70,8 @@
                         Background="White"
                         Padding="16,8"
                         HorizontalOptions="Center"
-                        WidthRequest="230"
-                        MaximumWidthRequest="240">
+                        WidthRequest="240"
+                        MaximumWidthRequest="260">
                     <VerticalStackLayout
                         HorizontalOptions="Center">
                         <Label x:Name="AutoSectionLabel"
@@ -87,11 +87,17 @@
                                TextDecorations="Underline"
                                FontSize="18"
                                FontAttributes="Bold"/>
-
-                        <Picker x:Name="auto1"
+                        <Border Stroke="#2B0B98"
+                                StrokeShape="RoundRectangle 10,10,10,10"
+                                StrokeThickness="4"
+                                Background="White"
+                                Padding="16,8"
+                                HorizontalOptions="Center">
+                            <Picker x:Name="auto1"
                                 IsVisible="true"
                                 TextColor="Black"
                                 FontSize="14"/>
+                        </Border>
 
                         <Stepper x:Name="auto1Stepper" Minimum="0" Maximum="1000"
                                  Increment="1"
@@ -103,10 +109,17 @@
                                  FontSize="18"
                                  FontAttributes="Bold"/>
 
-                        <Picker x:Name="auto2"
+                        <Border Stroke="#2B0B98"
+                                StrokeShape="RoundRectangle 10,10,10,10"
+                                StrokeThickness="4"
+                                Background="White"
+                                Padding="16,8"
+                                HorizontalOptions="Center">
+                            <Picker x:Name="auto2"
                                 IsVisible="true"
                                 TextColor="Black"
                                 FontSize="14"/>
+                        </Border>
 
                         <Stepper x:Name="auto2Stepper" Minimum="0" Maximum="1000"
                             Increment="1"
@@ -118,10 +131,19 @@
                                  FontSize="18"
                                  FontAttributes="Bold"/>
 
-                        <Picker x:Name="auto3"
+                        <Border Stroke="#2B0B98"
+                                StrokeShape="RoundRectangle 10,10,10,10"
+                                StrokeThickness="4"
+                                Background="White"
+                                Padding="16,8"
+                                HorizontalOptions="Center">
+
+                            <Picker x:Name="auto3"
                                 FontSize="14"
                                 IsVisible="true"
                                 TextColor="Black"/>
+
+                        </Border>
 
                         <Stepper x:Name="auto3Stepper" Minimum="0" Maximum="1000"
                             Increment="1"
@@ -133,10 +155,19 @@
                                     FontSize="18"
                                     FontAttributes="Bold"/>
 
-                        <Picker x:Name="auto4"
+                        <Border Stroke="#2B0B98"
+                                StrokeShape="RoundRectangle 10,10,10,10"
+                                StrokeThickness="4"
+                                Background="White"
+                                Padding="16,8"
+                                HorizontalOptions="Center">
+
+                            <Picker x:Name="auto4"
                                 FontSize="14"
                                 IsVisible="true"
                                 TextColor="Black"/>
+
+                        </Border>
 
                         <Stepper x:Name="auto4Stepper" Minimum="0" Maximum="1000"
                             Increment="1"
@@ -148,10 +179,19 @@
                                     FontSize="18"
                                     FontAttributes="Bold"/>
 
-                        <Picker x:Name="auto5"
+                        <Border Stroke="#2B0B98"
+                                StrokeShape="RoundRectangle 10,10,10,10"
+                                StrokeThickness="4"
+                                Background="White"
+                                Padding="16,8"
+                                HorizontalOptions="Center">
+
+                            <Picker x:Name="auto5"
                                 IsVisible="true"
                                 TextColor="Black"
                                 FontSize="14"/>
+
+                        </Border>
 
                         <Stepper x:Name="auto5Stepper" Minimum="0" Maximum="1000"
                             Increment="1"
@@ -163,10 +203,19 @@
                                     FontSize="18"
                                     FontAttributes="Bold"/>
 
-                        <Picker x:Name="auto6"
+                        <Border Stroke="#2B0B98"
+                                StrokeShape="RoundRectangle 10,10,10,10"
+                                StrokeThickness="4"
+                                Background="White"
+                                Padding="16,8"
+                                HorizontalOptions="Center">
+
+                            <Picker x:Name="auto6"
                                 IsVisible="true"
                                 TextColor="Black"
                                 FontSize="14"/>
+
+                        </Border>
 
                         <Stepper x:Name="auto6Stepper" Minimum="0" Maximum="1000"
                             Increment="1"
@@ -181,8 +230,8 @@
                         Background="White"
                         Padding="16,8"
                         HorizontalOptions="Center"
-                        WidthRequest="230"
-                        MaximumWidthRequest="240">
+                        WidthRequest="250"
+                        MaximumWidthRequest="260">
                     <VerticalStackLayout
                         HorizontalOptions="Center">
                         <Label x:Name="TeleopSectionLabel"
@@ -198,11 +247,20 @@
                                  TextDecorations="Underline"
                                  FontSize="18"
                                  FontAttributes="Bold"/>
-                      
-                        <Picker x:Name="teleop1"
+
+                        <Border Stroke="#2B0B98"
+                                StrokeShape="RoundRectangle 10,10,10,10"
+                                StrokeThickness="4"
+                                Background="White"
+                                Padding="16,8"
+                                HorizontalOptions="Center">
+
+                            <Picker x:Name="teleop1"
                                 IsVisible="true"
                                 TextColor="Black"
                                 FontSize="14"/>
+
+                        </Border>
 
                         <Stepper x:Name="teleop1Stepper" Minimum="0" Maximum="1000"
                             Increment="1"
@@ -214,10 +272,19 @@
                                  FontSize="18"
                                  FontAttributes="Bold"/>
 
-                        <Picker x:Name="teleop2"
+                        <Border Stroke="#2B0B98"
+                                StrokeShape="RoundRectangle 10,10,10,10"
+                                StrokeThickness="4"
+                                Background="White"
+                                Padding="16,8"
+                                HorizontalOptions="Center">
+
+                            <Picker x:Name="teleop2"
                                 IsVisible="true"
                                 TextColor="Black"
                                 FontSize="14"/>
+
+                        </Border>
 
                         <Stepper x:Name="teleop2Stepper" Minimum="0" Maximum="1000"
                             Increment="1"
@@ -229,10 +296,19 @@
                                  FontSize="18"
                                  FontAttributes="Bold"/>
 
-                        <Picker x:Name="teleop3"
+                        <Border Stroke="#2B0B98"
+                                StrokeShape="RoundRectangle 10,10,10,10"
+                                StrokeThickness="4"
+                                Background="White"
+                                Padding="16,8"
+                                HorizontalOptions="Center">
+
+                            <Picker x:Name="teleop3"
                                 IsVisible="true"
                                 TextColor="Black"
                                 FontSize="14"/>
+
+                        </Border>
 
                         <Stepper x:Name="teleop3Stepper" Minimum="0" Maximum="1000"
                             Increment="1"
@@ -244,10 +320,19 @@
                                     FontSize="18"
                                     FontAttributes="Bold"/>
 
-                        <Picker x:Name="teleop4"
+                        <Border Stroke="#2B0B98"
+                            StrokeShape="RoundRectangle 10,10,10,10"
+                            StrokeThickness="4"
+                            Background="White"
+                            Padding="16,8"
+                            HorizontalOptions="Center">
+
+                            <Picker x:Name="teleop4"
                                 IsVisible="true"
                                 TextColor="Black"
                                 FontSize="14"/>
+
+                        </Border>
 
                         <Stepper x:Name="teleop4Stepper" Minimum="0" Maximum="1000"
                             Increment="1"
@@ -259,10 +344,19 @@
                                     FontSize="18"
                                     FontAttributes="Bold"/>
 
-                        <Picker x:Name="teleop5"
+                        <Border Stroke="#2B0B98"
+                                StrokeShape="RoundRectangle 10,10,10,10"
+                                StrokeThickness="4"
+                                Background="White"
+                                Padding="16,8"
+                                HorizontalOptions="Center">
+
+                            <Picker x:Name="teleop5"
                                 IsVisible="true"
                                 TextColor="Black"
                                 FontSize="14"/>
+
+                        </Border>
 
                         <Stepper x:Name="teleop5Stepper" Minimum="0" Maximum="1000"
                             Increment="1"
@@ -274,41 +368,76 @@
                                     FontSize="18"
                                     FontAttributes="Bold"/>
 
-                        <Picker x:Name="teleop6"
+                        <Border Stroke="#2B0B98"
+                                StrokeShape="RoundRectangle 10,10,10,10"
+                                StrokeThickness="4"
+                                Background="White"
+                                Padding="16,8"
+                                HorizontalOptions="Center">
+
+                            <Picker x:Name="teleop6"
                                 IsVisible="true"
                                 TextColor="Black"
                                 FontSize="14"/>
+
+                        </Border>
 
                         <Stepper x:Name="teleop6Stepper" Minimum="0" Maximum="1000"
                             Increment="1"
                             HorizontalOptions="Center"
                             ValueChanged="Teleop6StepChanged"/>
 
+                        <BoxView HeightRequest="1" Color="#2B0B98" Margin="5"/>
+
                         <HorizontalStackLayout HorizontalOptions="Center">
                             <VerticalStackLayout HorizontalOptions="Center">
                                 <Label x:Name="giveDefLabel" Text="Give Def"/>
-                                <Picker x:Name="givesDef"
+                                <Border Stroke="#2B0B98"
+                                        StrokeShape="RoundRectangle 10,10,10,10"
+                                        StrokeThickness="4"
+                                        Background="White"
+                                        Padding="16,8"
+                                        HorizontalOptions="Center">
+                                    <Picker x:Name="givesDef"
+                                    FontAttributes="Bold"
                                     IsVisible="true"
                                     TextColor="Black"
                                     FontSize="14"/>
+                                </Border>
                             </VerticalStackLayout>
 
                             <VerticalStackLayout HorizontalOptions="Center">
                                 <Label x:Name="takesDefLabel" Text="Takes Def"/>
-                                <Picker x:Name="takesDef"
+                                <Border Stroke="#2B0B98"
+                                        StrokeShape="RoundRectangle 10,10,10,10"
+                                        StrokeThickness="4"
+                                        Background="White"
+                                        Padding="16,8"
+                                        HorizontalOptions="Center">
+                                    <Picker x:Name="takesDef"
+                                    FontAttributes="Bold"
                                     IsVisible="true"
                                     TextColor="Black"
                                     FontSize="14"/>
+                                </Border>
                             </VerticalStackLayout>
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout HorizontalOptions="Center">
                             <VerticalStackLayout HorizontalOptions="Center">
                                 <Label x:Name="robotSpeedLabel" Text="Robot Speed"/>
-                                <Picker x:Name="robotSpeed"
+                                <Border Stroke="#2B0B98"
+                                        StrokeShape="RoundRectangle 10,10,10,10"
+                                        StrokeThickness="4"
+                                        Background="White"
+                                        Padding="16,8"
+                                        HorizontalOptions="Center">
+                                    <Picker x:Name="robotSpeed"
+                                    FontAttributes="Bold"
                                     IsVisible="true"
                                     TextColor="Black"
                                     FontSize="14"/>
+                                </Border>
                             </VerticalStackLayout>
                         </HorizontalStackLayout>
 
