@@ -4,6 +4,7 @@ public partial class MainPage : ContentPage
 {
     private XMLParser parser;
     private Match match;
+    private LastMatchInfo lastMatchInfo;
     private int clickCount = 0;
     private int unlockNumber = 3;
 
@@ -13,6 +14,8 @@ public partial class MainPage : ContentPage
         parser = new XMLParser();
         match = new Match();
         VersionNumberLabel.Text = parser.GetItemById("AppVersion");
+
+        lastMatchInfo = new LastMatchInfo();
     }
 
     // https://raw.githubusercontent.com/frc5687/ScoutEye/main/configs/config.xml
@@ -21,7 +24,8 @@ public partial class MainPage : ContentPage
 	{
 		try
 		{
-            await Navigation.PushAsync(new MatchInfo(ScoutNameEntry.Text.ToString()));
+            lastMatchInfo.scoutName = ScoutNameEntry.Text.ToString();
+            await Navigation.PushAsync(new MatchInfo(lastMatchInfo)); ;
         }
         catch
 		{

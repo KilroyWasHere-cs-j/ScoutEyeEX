@@ -1,5 +1,11 @@
 ﻿namespace SE
 {
+    public struct LastMatchInfo
+    {
+        public string scoutName;
+        public int matchNumber;
+    }
+
     public struct Match
     {
         public string scoutName;
