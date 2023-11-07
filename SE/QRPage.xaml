@@ -23,6 +23,8 @@
                 MaximumHeightRequest="60"
                 MaximumWidthRequest="160"/>
 
+        <Label x:Name="LoggedMatchInfo" Text="" Margin="50"/>
+
         <Label x:Name="OutputLabel"/>
     </VerticalStackLayout>
 </ContentPage>

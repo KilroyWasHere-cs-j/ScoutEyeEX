@@ -3,11 +3,13 @@ namespace SE;
 public partial class MatchInfo : ContentPage
 {
 	private Match match;
-	public MatchInfo(string scoutName)
+    private LastMatchInfo lastMatchInfo;
+	public MatchInfo(LastMatchInfo lastMatchInfo)
 	{
 		InitializeComponent();
 		match = new Match();
-		match.scoutName = scoutName;
+        match.scoutName = lastMatchInfo.scoutName;
+        MatchNumberEntry.Text = lastMatchInfo.matchNumber.ToString();
 	}
 
 	private async void OnScoutButtonClicked(object sender, EventArgs e)
