@@ -6,15 +6,15 @@ Simple, consistent, and designed for a mission.
 
 ## What is ScoutEyeEX
 
-ScoutEyeEX is a complete rewrite of the legacy ScoutEye scouting system. ScoutEyeEX is still with the exception of the inital configuration completely internet independent.
+ScoutEyeEX is a complete rewrite of the legacy ScoutEye scouting system. ScoutEyeEX is still, with the exception of the initial configuration, completely internet independent.
 
 
 
-## Cross platform support 
+## Cross platform support
 
-ScoutEyeEX is build ontop of the [.NET MAUI](https://dotnet.microsoft.com/en-us/apps/maui). Now ScoutEyeEX can finally deliver on a truly cross platform FRC scouting expirence.
+ScoutEyeEX is build on top of the [.NET MAUI](https://dotnet.microsoft.com/en-us/apps/maui). Now ScoutEyeEX can finally deliver on a truly cross platform FRC scouting experience.
 
-### ScoutEyeEX currently supports 
+### ScoutEyeEX currently supports
 
 - Windows 11 and 10
 - Android
@@ -31,3 +31,5 @@ ScoutEyeEX is build ontop of the [.NET MAUI](https://dotnet.microsoft.com/en-us/
 ## How to install
 
 Detailed instructions to come
+
+
