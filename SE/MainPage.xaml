@@ -68,7 +68,7 @@
                 </StackLayout>
             </Border>
 
-            <Button x:Name="DevButton" Text="To Dev Page" Clicked="OnToDevClicked"/>
+            <Button x:Name="ToHeaderQRPage" Text="CVS file header QR" Clicked="OnToHeaderQRPageClicked"/>
         </VerticalStackLayout>
     </ScrollView>
 

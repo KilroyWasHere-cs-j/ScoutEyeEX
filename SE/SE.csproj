@@ -88,6 +88,9 @@
 	  <MauiXaml Update="DummyPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="HeaderQRPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="MatchInfo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

@@ -49,19 +49,9 @@ public partial class MainPage : ContentPage
         }
     }
 
-    private async void OnToDevClicked(object sender, EventArgs e)
+    private async void OnToHeaderQRPageClicked(object sender, EventArgs e)
     {
-        try
-        {
-            if (ScoutNameEntry.Text.Contains("Honey Thief"))
-            {
-                await Navigation.PushAsync(new DevPage());
-            }
-        }
-        catch
-        {
-            await Navigation.PushAsync(new DummyPage());
-        }
+        await Navigation.PushAsync(new HeaderQRPage());
     }
 
     protected override void OnHandlerChanged()

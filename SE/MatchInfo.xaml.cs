@@ -29,7 +29,22 @@ public partial class MatchInfo : ContentPage
         }
     }
 
-	private void OnAllianceToggledClicked(object sender, EventArgs e)
+    private async void OnToDevClicked(object sender, EventArgs e)
+    {
+        try
+        {
+            if (match.scoutName.Contains("Admin"))
+            {
+                await Navigation.PushAsync(new DevPage());
+            }
+        }
+        catch
+        {
+            await DisplayAlert("Alert", "Invaild Dev password", "OK");
+        }
+    }
+
+    private void OnAllianceToggledClicked(object sender, EventArgs e)
 	{
         match.isBlue ^= true;
         if (match.isBlue == true)
