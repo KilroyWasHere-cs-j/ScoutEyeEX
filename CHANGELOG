@@ -17,7 +17,7 @@ All notable changes to ScoutEyeEX will be logged here.
 ### Fixed
 
 - "Next Match" button not incrementing by one(#14)
-- Purple border around drop downs will now hide with the drop down(#15)
+- Purple border around drop downs will now hide with the drop down(#20)
 
 ### Removed
 
