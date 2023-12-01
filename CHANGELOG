@@ -12,11 +12,7 @@ All notable changes to ScoutEyeEX will be logged here.
 
 ### Added
 
-- Output display page shows a sample output(#12) 
-- Output display page has a QR code containing column headers(#12)
-- Added defensive and robot speed trackables(#5)
-- A purple border to all drop downs to increase visibility(#2)
-
+- To CSV File Headers button added to home screen
 
 ### Fixed
 
@@ -24,6 +20,10 @@ All notable changes to ScoutEyeEX will be logged here.
 - "Next Match" button not incrementing by one(#14)
 - Miss matching between Old ScoutEye on Windows and New ScoutEye on Windows and Android(#11)
 
+### Removed
+
+- To Dev Page button
+
 ### Dropped
 
-- Hide plus and minus buttons(#3)
+
