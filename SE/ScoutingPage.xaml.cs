@@ -74,18 +74,18 @@ public partial class ScoutingPage : ContentPage
         teleop6Label.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop5Hide"));
         teleop6Stepper.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop5Hide"));
 
-        auto1Stepper.Value = 1;
-        auto2Stepper.Value = 1;
-        auto3Stepper.Value = 1;
-        auto4Stepper.Value = 1;
-        auto5Stepper.Value = 1;
-        auto6Stepper.Value = 1;
-        teleop1Stepper.Value = 1;
-        teleop2Stepper.Value = 1;
-        teleop3Stepper.Value = 1;
-        teleop4Stepper.Value = 1;
-        teleop5Stepper.Value = 1;
-        teleop6Stepper.Value = 1;
+        auto1Stepper.Value = 0;
+        auto2Stepper.Value = 0;
+        auto3Stepper.Value = 0;
+        auto4Stepper.Value = 0;
+        auto5Stepper.Value = 0;
+        auto6Stepper.Value = 0;
+        teleop1Stepper.Value = 0;
+        teleop2Stepper.Value = 0;
+        teleop3Stepper.Value = 0;
+        teleop4Stepper.Value = 0;
+        teleop5Stepper.Value = 0;
+        teleop6Stepper.Value = 0;
 
         auto1.SelectedIndex = 1;
         auto2.SelectedIndex = 1;
