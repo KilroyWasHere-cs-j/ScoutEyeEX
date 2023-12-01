@@ -87,12 +87,14 @@
                                TextDecorations="Underline"
                                FontSize="18"
                                FontAttributes="Bold"/>
-                        <Border Stroke="#2B0B98"
+                        <Border x:Name="Border0"
+                                Stroke="#2B0B98"
                                 StrokeShape="RoundRectangle 10,10,10,10"
                                 StrokeThickness="4"
                                 Background="White"
                                 Padding="16,8"
-                                HorizontalOptions="Center">
+                                HorizontalOptions="Center"
+                                IsVisible="true">
                             <Picker x:Name="auto1"
                                 IsVisible="true"
                                 TextColor="Black"
@@ -109,12 +111,14 @@
                                  FontSize="18"
                                  FontAttributes="Bold"/>
 
-                        <Border Stroke="#2B0B98"
+                        <Border x:Name="Border1"
+                                Stroke="#2B0B98"
                                 StrokeShape="RoundRectangle 10,10,10,10"
                                 StrokeThickness="4"
                                 Background="White"
                                 Padding="16,8"
-                                HorizontalOptions="Center">
+                                HorizontalOptions="Center"
+                                IsVisible="true">
                             <Picker x:Name="auto2"
                                 IsVisible="true"
                                 TextColor="Black"
@@ -131,12 +135,14 @@
                                  FontSize="18"
                                  FontAttributes="Bold"/>
 
-                        <Border Stroke="#2B0B98"
+                        <Border x:Name="Border2"
+                                Stroke="#2B0B98"
                                 StrokeShape="RoundRectangle 10,10,10,10"
                                 StrokeThickness="4"
                                 Background="White"
                                 Padding="16,8"
-                                HorizontalOptions="Center">
+                                HorizontalOptions="Center"
+                                IsVisible="true">
 
                             <Picker x:Name="auto3"
                                 FontSize="14"
@@ -155,12 +161,14 @@
                                     FontSize="18"
                                     FontAttributes="Bold"/>
 
-                        <Border Stroke="#2B0B98"
+                        <Border x:Name="Border3"
+                                Stroke="#2B0B98"
                                 StrokeShape="RoundRectangle 10,10,10,10"
                                 StrokeThickness="4"
                                 Background="White"
                                 Padding="16,8"
-                                HorizontalOptions="Center">
+                                HorizontalOptions="Center"
+                                IsVisible="true">
 
                             <Picker x:Name="auto4"
                                 FontSize="14"
@@ -179,12 +187,14 @@
                                     FontSize="18"
                                     FontAttributes="Bold"/>
 
-                        <Border Stroke="#2B0B98"
+                        <Border x:Name="Border4"
+                                Stroke="#2B0B98"
                                 StrokeShape="RoundRectangle 10,10,10,10"
                                 StrokeThickness="4"
                                 Background="White"
                                 Padding="16,8"
-                                HorizontalOptions="Center">
+                                HorizontalOptions="Center"
+                                IsVisible="true">
 
                             <Picker x:Name="auto5"
                                 IsVisible="true"
@@ -203,12 +213,14 @@
                                     FontSize="18"
                                     FontAttributes="Bold"/>
 
-                        <Border Stroke="#2B0B98"
+                        <Border x:Name="Border5"
+                                Stroke="#2B0B98"
                                 StrokeShape="RoundRectangle 10,10,10,10"
                                 StrokeThickness="4"
                                 Background="White"
                                 Padding="16,8"
-                                HorizontalOptions="Center">
+                                HorizontalOptions="Center"
+                                IsVisible="true">
 
                             <Picker x:Name="auto6"
                                 IsVisible="true"
@@ -248,12 +260,14 @@
                                  FontSize="18"
                                  FontAttributes="Bold"/>
 
-                        <Border Stroke="#2B0B98"
+                        <Border x:Name="Border6"
+                                Stroke="#2B0B98"
                                 StrokeShape="RoundRectangle 10,10,10,10"
                                 StrokeThickness="4"
                                 Background="White"
                                 Padding="16,8"
-                                HorizontalOptions="Center">
+                                HorizontalOptions="Center"
+                                IsVisible="true">
 
                             <Picker x:Name="teleop1"
                                 IsVisible="true"
@@ -272,12 +286,14 @@
                                  FontSize="18"
                                  FontAttributes="Bold"/>
 
-                        <Border Stroke="#2B0B98"
+                        <Border x:Name="Border7"
+                                Stroke="#2B0B98"
                                 StrokeShape="RoundRectangle 10,10,10,10"
                                 StrokeThickness="4"
                                 Background="White"
                                 Padding="16,8"
-                                HorizontalOptions="Center">
+                                HorizontalOptions="Center"
+                                IsVisible="true">
 
                             <Picker x:Name="teleop2"
                                 IsVisible="true"
@@ -296,12 +312,14 @@
                                  FontSize="18"
                                  FontAttributes="Bold"/>
 
-                        <Border Stroke="#2B0B98"
+                        <Border x:Name="Border8"
+                                Stroke="#2B0B98"
                                 StrokeShape="RoundRectangle 10,10,10,10"
                                 StrokeThickness="4"
                                 Background="White"
                                 Padding="16,8"
-                                HorizontalOptions="Center">
+                                HorizontalOptions="Center"
+                                IsVisible="true">
 
                             <Picker x:Name="teleop3"
                                 IsVisible="true"
@@ -320,12 +338,14 @@
                                     FontSize="18"
                                     FontAttributes="Bold"/>
 
-                        <Border Stroke="#2B0B98"
-                            StrokeShape="RoundRectangle 10,10,10,10"
-                            StrokeThickness="4"
-                            Background="White"
-                            Padding="16,8"
-                            HorizontalOptions="Center">
+                        <Border x:Name="Border9"
+                                Stroke="#2B0B98"
+                                StrokeShape="RoundRectangle 10,10,10,10"
+                                StrokeThickness="4"
+                                Background="White"
+                                Padding="16,8"
+                                HorizontalOptions="Center"
+                                IsVisible="true">
 
                             <Picker x:Name="teleop4"
                                 IsVisible="true"
@@ -344,12 +364,14 @@
                                     FontSize="18"
                                     FontAttributes="Bold"/>
 
-                        <Border Stroke="#2B0B98"
+                        <Border x:Name="Border10"
+                                Stroke="#2B0B98"
                                 StrokeShape="RoundRectangle 10,10,10,10"
                                 StrokeThickness="4"
                                 Background="White"
                                 Padding="16,8"
-                                HorizontalOptions="Center">
+                                HorizontalOptions="Center"
+                                IsVisible="true">
 
                             <Picker x:Name="teleop5"
                                 IsVisible="true"
@@ -368,12 +390,14 @@
                                     FontSize="18"
                                     FontAttributes="Bold"/>
 
-                        <Border Stroke="#2B0B98"
+                        <Border x:Name="Border11"
+                                Stroke="#2B0B98"
                                 StrokeShape="RoundRectangle 10,10,10,10"
                                 StrokeThickness="4"
                                 Background="White"
                                 Padding="16,8"
-                                HorizontalOptions="Center">
+                                HorizontalOptions="Center"
+                                IsVisible="true">
 
                             <Picker x:Name="teleop6"
                                 IsVisible="true"
