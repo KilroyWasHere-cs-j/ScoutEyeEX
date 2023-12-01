@@ -1,5 +1,4 @@
 using QRCoder;
-using System.Text.RegularExpressions;
 
 namespace SE;
 
