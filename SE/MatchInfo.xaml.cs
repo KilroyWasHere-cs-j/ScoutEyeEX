@@ -35,7 +35,7 @@ public partial class MatchInfo : ContentPage
         {
             if (match.scoutName.Contains("Admin"))
             {
-                await Navigation.PushAsync(new DevPage());
+               // await Navigation.PushAsync(new DevPage());
             }
         }
         catch
