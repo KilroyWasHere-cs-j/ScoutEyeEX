@@ -16,6 +16,8 @@ public partial class ScoutingPage : ContentPage
         LoadPage();
     }
 
+    // Get ready from stupid stupid code
+
     private void LoadPage()
     {
         // Name all the autonomous trackables
@@ -53,6 +55,7 @@ public partial class ScoutingPage : ContentPage
         auto6.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto5Hide"));
         auto6Label.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto5Hide"));
         auto6Stepper.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto5Hide"));
+        
 
         // Determine visibility of teleoperated trackables and their respective labels
         teleop1.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop0Hide"));
@@ -74,32 +77,6 @@ public partial class ScoutingPage : ContentPage
         teleop6Label.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop5Hide"));
         teleop6Stepper.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop5Hide"));
 
-        auto1Stepper.Value = 0;
-        auto2Stepper.Value = 0;
-        auto3Stepper.Value = 0;
-        auto4Stepper.Value = 0;
-        auto5Stepper.Value = 0;
-        auto6Stepper.Value = 0;
-        teleop1Stepper.Value = 0;
-        teleop2Stepper.Value = 0;
-        teleop3Stepper.Value = 0;
-        teleop4Stepper.Value = 0;
-        teleop5Stepper.Value = 0;
-        teleop6Stepper.Value = 0;
-
-        auto1.SelectedIndex = 1;
-        auto2.SelectedIndex = 1;
-        auto3.SelectedIndex = 1;
-        auto4.SelectedIndex = 1;
-        auto5.SelectedIndex = 1;
-        auto6.SelectedIndex = 1;
-        teleop1.SelectedIndex = 1;
-        teleop2.SelectedIndex = 1;
-        teleop3.SelectedIndex = 1;
-        teleop4.SelectedIndex = 1;
-        teleop5.SelectedIndex = 1;
-        teleop6.SelectedIndex = 1;
-
         for (int i = 0; i <= 5; i++)
         {
             givesDef.Items.Add(i.ToString());
@@ -110,8 +87,7 @@ public partial class ScoutingPage : ContentPage
         {
             robotSpeed.Items.Add(i.ToString());
         }
-        // Get ready from stupid stupid code
-
+        
         foreach(var i in GetFill("Auto0Items"))
         {
             auto1.Items.Add(i);
@@ -171,6 +147,36 @@ public partial class ScoutingPage : ContentPage
         {
             teleop6.Items.Add(i);
         }
+
+        auto1Stepper.Value = 0;
+        auto2Stepper.Value = 0;
+        auto3Stepper.Value = 0;
+        auto4Stepper.Value = 0;
+        auto5Stepper.Value = 0;
+        auto6Stepper.Value = 0;
+        teleop1Stepper.Value = 0;
+        teleop2Stepper.Value = 0;
+        teleop3Stepper.Value = 0;
+        teleop4Stepper.Value = 0;
+        teleop5Stepper.Value = 0;
+        teleop6Stepper.Value = 0;
+
+        auto1.SelectedIndex = 0;
+        auto2.SelectedIndex = 0;
+        auto3.SelectedIndex = 0;
+        auto4.SelectedIndex = 0;
+        auto5.SelectedIndex = 0;
+        auto6.SelectedIndex = 0;
+        teleop1.SelectedIndex = 0;
+        teleop2.SelectedIndex = 0;
+        teleop3.SelectedIndex = 0;
+        teleop4.SelectedIndex = 0;
+        teleop5.SelectedIndex = 0;
+        teleop6.SelectedIndex = 0;
+
+        robotSpeed.SelectedIndex = 0;
+        givesDef.SelectedIndex = 0;
+        takesDef.SelectedIndex = 0;
     }
 
     private string[] GetFill(string id)
