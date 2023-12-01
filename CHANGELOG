@@ -16,9 +16,7 @@ All notable changes to ScoutEyeEX will be logged here.
 
 ### Fixed
 
-- Increased the number of times the logo has to be clicked to skip to the scouting page(#4)
 - "Next Match" button not incrementing by one(#14)
-- Miss matching between Old ScoutEye on Windows and New ScoutEye on Windows and Android(#11)
 
 ### Removed
 
