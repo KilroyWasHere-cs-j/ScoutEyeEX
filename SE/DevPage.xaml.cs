@@ -9,8 +9,7 @@ public partial class DevPage : ContentPage
     public DevPage(Match match)
     {
         InitializeComponent();
+        // set local match object to the match object passed in
         this.match = match;
     }
-
-
 }
