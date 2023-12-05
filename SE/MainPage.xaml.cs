@@ -1,38 +1,60 @@
 ﻿namespace SE;
 
+/// <summary>
+/// This is the main page of the app. It allows users to navigate to the ScoutingPage, HeaderQRPage, and MatchInfo pages.
+/// 
+/// Author: Gabriel Tower
+/// Written: 11/2023
+/// 
+/// Kilroy Was Here
+/// </summary>
+
 public partial class MainPage : ContentPage
 {
     private XMLParser parser;
     private Match match;
     private LastMatchInfo lastMatchInfo;
+    
+    // Number of times Horus is clicked
     private int clickCount = 0;
+    // Number of times Horus must be clicked to unlock
     private int unlockNumber = 3;
 
 	public MainPage()
 	{
 		InitializeComponent();
+        
+        // Initialize the XMLParser, Match, and LastMatchInfo objects
         parser = new XMLParser();
         match = new Match();
-        VersionNumberLabel.Text = parser.GetItemById("AppVersion");
-
         lastMatchInfo = new LastMatchInfo();
+
+        // Set the version number label
+        VersionNumberLabel.Text = parser.GetItemById("AppVersion");
     }
 
     // https://raw.githubusercontent.com/frc5687/ScoutEye/main/configs/config.xml
 
+    #region Event Handlers
+    ///<summary>
+    ///This method is called when the user clicks the "To Scouting" button
+    ///</summary>
     private async void OnToScoutingClicked(object sender, EventArgs e)
-	{
-		try
-		{
+    {
+        try
+        {
             lastMatchInfo.scoutName = ScoutNameEntry.Text.ToString();
-            await Navigation.PushAsync(new MatchInfo(lastMatchInfo)); ;
+            await Navigation.PushAsync(new MatchInfo(lastMatchInfo));
         }
         catch
-		{
-			await DisplayAlert("Alert", "Please enter a name", "OK");
-		}
+        {
+            await DisplayAlert("Alert", "Please enter a name", "OK");
+        }
     }
 
+    ///<summary>
+    ///This method is called when the user clicks the "To Settings" button
+    ///</summary>
     private async void OnHorusClicked(object sender, EventArgs e)
     {
         if(clickCount == unlockNumber)
@@ -49,11 +71,17 @@ public partial class MainPage : ContentPage
         }
     }
 
+    ///<summary>
+    ///This method is called when the user clicks the "To Header QR" button
+    ///</summary>s
     private async void OnToHeaderQRPageClicked(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new HeaderQRPage());
     }
 
+    ///<summary>
+    ///Forces light mode for Windows or Android
+    ///</summary>
     protected override void OnHandlerChanged()
     {
         base.OnHandlerChanged();
@@ -68,5 +96,6 @@ public partial class MainPage : ContentPage
           WelcomeLabel.Margin = new Thickness(20, 0, 0, 0);
 #endif
     }
+    #endregion
 }
 
