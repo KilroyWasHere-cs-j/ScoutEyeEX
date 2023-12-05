@@ -1,11 +1,11 @@
 namespace SE;
 
+using Microsoft.Maui.Controls;
+
 /// <summary>
 /// This is the page of the app where users can scout matches.
 /// 
 /// This entire page is a mess and needs an exorcism
-/// 
-/// using Microsoft.Maui.Controls;
 /// 
 /// Author: Gabriel Tower
 /// Written: 11/2023
@@ -39,101 +39,88 @@ public partial class ScoutingPage : ContentPage
     /// </summary>
     private void LoadPage()
     {
-        // Name all the autonomous trackables
-        auto1Label.Text = parser.GetItemById("Auto0");
-        auto2Label.Text = parser.GetItemById("Auto1");
-        auto3Label.Text = parser.GetItemById("Auto2");
-        auto4Label.Text = parser.GetItemById("Auto3");
-        auto5Label.Text = parser.GetItemById("Auto4");
-        auto6Label.Text = parser.GetItemById("Auto5");
+        int label_count = -1;
+        int stepper_count = 0;
+        int picker_count = 0;
+        int border_count = 0;
+        foreach (var autos_child in trackables_auto.Children)
+        { 
+            switch (autos_child)
+            {
+                case Label:
+                    Label label = (Label)autos_child;
+                    if (label_count == -1)
+                    {
+                        label.Text = "Autonomous";
+                        label_count++;
+                    }
+                    else
+                    {
+                        label.Text = parser.GetItemById("Auto" + label_count.ToString());
+                        label.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto" + label_count.ToString() + "Hide"));
+                        label_count++;
+                    }
+                    break;
 
-        // Name all the teleoperated trackables
-        teleop1Label.Text = parser.GetItemById("Teleop0");
-        teleop2Label.Text = parser.GetItemById("Teleop1");
-        teleop3Label.Text = parser.GetItemById("Teleop2");
-        teleop4Label.Text = parser.GetItemById("Teleop3");
-        teleop5Label.Text = parser.GetItemById("Teleop4");
-        teleop6Label.Text = parser.GetItemById("Teleop5");
+                case Border:
+                    Border border = (Border)autos_child;
+                    border.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto" + border_count.ToString() + "Hide"));
+                    border_count++;
+                    break;
 
-        // Determine visibility of autonomous trackables and their respective labels
-       // auto1.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto0Hide"));
-        auto1Label.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto0Hide"));
-        auto1Stepper.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto0Hide"));
-        Border0.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto0Hide"));
-        auto2.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto1Hide"));
-        auto2Label.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto1Hide"));
-        auto2Stepper.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto1Hide"));
-        Border1.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto1Hide"));
-        auto3.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto2Hide"));
-        auto3Label.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto2Hide"));
-        auto3Stepper.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto2Hide"));
-        Border2.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto2Hide"));
-        auto4.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto3Hide"));
-        auto4Label.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto3Hide"));
-        auto4Stepper.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto3Hide"));
-        Border3.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto3Hide"));
-        auto5.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto4Hide"));
-        auto5Label.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto4Hide"));
-        auto5Stepper.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto4Hide"));
-        Border4.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto4Hide"));
-        auto6.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto5Hide"));
-        auto6Label.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto5Hide"));
-        auto6Stepper.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto5Hide"));
-        Border5.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto5Hide"));
+                case Stepper:
+                    Stepper stepper = (Stepper)autos_child;
+                    stepper.Value = 0;
+                    stepper.IsVisible = !Convert.ToBoolean(parser.GetItemById("Auto" + stepper_count.ToString() + "Hide"));
+                    stepper_count++;
+                    break;
+            }
+        }
 
-        // Determine visibility of teleoperated trackables and their respective labels
-        teleop1.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop0Hide"));
-        teleop1Label.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop0Hide"));
-        teleop1Stepper.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop0Hide"));
-        Border6.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop0Hide"));
-        teleop2.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop1Hide"));
-        teleop2Label.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop1Hide"));
-        teleop2Stepper.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop1Hide"));
-        Border7.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop1Hide"));
-        teleop3.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop2Hide"));
-        teleop3Label.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop2Hide"));
-        teleop3Stepper.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop2Hide"));
-        Border8.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop2Hide"));
-        teleop4.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop3Hide"));
-        teleop4Label.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop3Hide"));
-        teleop4Stepper.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop3Hide"));
-        Border9.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop3Hide"));
-        teleop5.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop4Hide"));
-        teleop5Label.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop4Hide"));
-        teleop5Stepper.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop4Hide"));
-        Border10.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop4Hide"));
-        teleop6.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop5Hide"));
-        teleop6Label.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop5Hide"));
-        teleop6Stepper.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop5Hide"));
-        Border11.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop5Hide"));
+        label_count = -1;
+        stepper_count = 0;
+        picker_count = 0;
+        border_count = 0;
+        foreach (var teleops_child in trackables_teleop.Children)
+        {
+            switch (teleops_child)
+            {
+                case Label:
+                    Label label = (Label)teleops_child;
+                    if (label_count == -1)
+                    {
+                        label.Text = "Teleoperated";
+                        label_count++;
+                    }
+                    else
+                    {
+                        label.Text = parser.GetItemById("Teleop" + label_count.ToString());
+                        label.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop" + label_count.ToString() + "Hide"));
+                        label_count++;
+                    }
+                    break;
 
+                case Picker:
+                    Picker picker = (Picker)teleops_child;
+                    picker.SelectedIndex = 0;
+                    picker_count++;
+                    break;
+
+                case Border:
+                    Border border = (Border)teleops_child;
+                    border.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop" + border_count.ToString() + "Hide"));
+                    border_count++;
+                    break;
+
+                case Stepper:
+                    Stepper stepper = (Stepper)teleops_child;
+                    stepper.Value = 0;
+                    stepper.IsVisible = !Convert.ToBoolean(parser.GetItemById("Teleop" + stepper_count.ToString() + "Hide"));
+                    stepper_count++;
+                    break;
+            }
+        }
         // Sets the stepper values to 0
-        auto1Stepper.Value = 0;
-        auto2Stepper.Value = 0;
-        auto3Stepper.Value = 0;
-        auto4Stepper.Value = 0;
-        auto5Stepper.Value = 0;
-        auto6Stepper.Value = 0;
-        teleop1Stepper.Value = 0;
-        teleop2Stepper.Value = 0;
-        teleop3Stepper.Value = 0;
-        teleop4Stepper.Value = 0;
-        teleop5Stepper.Value = 0;
-        teleop6Stepper.Value = 0;
-
-        // Sets the stepper selected index to 1
-        auto1.SelectedIndex = 1;
-        auto2.SelectedIndex = 1;
-        auto3.SelectedIndex = 1;
-        auto4.SelectedIndex = 1;
-        auto5.SelectedIndex = 1;
-        auto6.SelectedIndex = 1;
-        teleop1.SelectedIndex = 1;
-        teleop2.SelectedIndex = 1;
-        teleop3.SelectedIndex = 1;
-        teleop4.SelectedIndex = 1;
-        teleop5.SelectedIndex = 1;
-        teleop6.SelectedIndex = 1;
 
         // Populate the trackable values
 
@@ -382,31 +369,26 @@ public partial class ScoutingPage : ContentPage
     /// </summary>
     private void ClearMatch()
     {
-        auto1.SelectedIndex = 0;
-        auto2.SelectedIndex = 0;
-        auto3.SelectedIndex = 0;
-        auto4.SelectedIndex = 0;
-        auto5.SelectedIndex = 0;
-        auto6.SelectedIndex = 0;
-        teleop1.SelectedIndex = 0;
-        teleop2.SelectedIndex = 0;
-        teleop3.SelectedIndex = 0;
-        teleop4.SelectedIndex = 0;
-        teleop5.SelectedIndex = 0;
-        teleop6.SelectedIndex = 0;
-
-        auto1Stepper.Value = 0;
-        auto2Stepper.Value = 0;
-        auto3Stepper.Value = 0;
-        auto4Stepper.Value = 0;
-        auto5Stepper.Value = 0;
-        auto6Stepper.Value = 0;
-        teleop1Stepper.Value = 0;
-        teleop2Stepper.Value = 0;
-        teleop3Stepper.Value = 0;
-        teleop4Stepper.Value = 0;
-        teleop5Stepper.Value = 0;
-        teleop6Stepper.Value = 0;
+        foreach(var autos_child in trackables_auto.Children)
+        {
+            switch (autos_child)
+            {
+                case Stepper:
+                    Stepper stepper = (Stepper)autos_child;
+                    stepper.Value = 0;
+                    break;
+            }
+        }
+        foreach(var teleops_child in trackables_teleop.Children)
+        {
+            switch (teleops_child)
+            {
+                case Stepper:
+                    Stepper stepper = (Stepper)teleops_child;
+                    stepper.Value = 0;
+                    break;
+            }
+        }
 
         robotSpeed.SelectedIndex = 0;
         givesDef.SelectedIndex = 0;

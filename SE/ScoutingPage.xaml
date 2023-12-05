@@ -6,7 +6,7 @@
              Title="Scouting Page">
 
 
-    <StackLayout>
+    <StackLayout x:Name="stackLayout">
         <Label 
             x:Name="WelcomeMessageLabel"
             Text="Paste"
@@ -43,7 +43,7 @@
             VerticalOptions="FillAndExpand"
             VerticalScrollBarVisibility="Always">
 
-            <StackLayout>
+            <StackLayout x:Name="trackables_vertical_layout">
 
                 <HorizontalStackLayout
                     HorizontalOptions="Center">
@@ -72,7 +72,7 @@
                         HorizontalOptions="Center"
                         WidthRequest="240"
                         MaximumWidthRequest="260">
-                    <VerticalStackLayout
+                    <VerticalStackLayout x:Name="trackables_auto"
                         HorizontalOptions="Center">
                         <Label x:Name="AutoSectionLabel"
                                Text="Autonomous"
@@ -244,7 +244,7 @@
                         HorizontalOptions="Center"
                         WidthRequest="250"
                         MaximumWidthRequest="260">
-                    <VerticalStackLayout
+                    <VerticalStackLayout x:Name="trackables_teleop"
                         HorizontalOptions="Center">
                         <Label x:Name="TeleopSectionLabel"
                                Text="Teleoperated"
