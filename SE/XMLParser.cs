@@ -38,8 +38,15 @@ public class XMLParser
     /// <returns></returns>
     public string GetItemById(string id)
     {
-        // Get inner text of the item from an ID
-        XmlNodeList item = xmlDoc.GetElementsByTagName(id);
-        return item[0].InnerText.ToString();
+        try
+        {
+            // Get inner text of the item from an ID
+            XmlNodeList item = xmlDoc.GetElementsByTagName(id);
+            return item[0].InnerText.ToString();
+        }
+        catch
+        {
+            return "NULL";
+        }
     }
 }
