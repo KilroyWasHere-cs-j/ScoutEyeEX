@@ -63,6 +63,6 @@
                 HorizontalOptions="Center" />
 
         <Image Source="horus.svg"/>
-        <Button x:Name="DevButton" Text="To Dev Page" Clicked="OnToDevClicked"/>
+        <Button x:Name="DevButton" Text="Dev" Clicked="OnToDevClicked" WidthRequest="120"/>
     </VerticalStackLayout>
 </ContentPage>

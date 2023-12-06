@@ -38,17 +38,6 @@
                 FontSize="18"
                 HorizontalOptions="Center" />
 
-            <Button
-                x:Name="ToScouting"
-                Text="Scout"
-                SemanticProperties.Hint="Opens scouting page"
-                Clicked="OnToScoutingClicked"
-                HorizontalOptions="Center"
-                WidthRequest="200"
-                HeightRequest="40"
-                MaximumWidthRequest="220"
-                MaximumHeightRequest="50"/>
-
             <Border Stroke="#2B0B98"
                         StrokeShape="RoundRectangle 10,10,10,10"
                         StrokeThickness="4"
@@ -64,11 +53,23 @@
                            Placeholder="Scout Name"
                            ClearButtonVisibility="WhileEditing"
                            IsSpellCheckEnabled="false"
-                           IsTextPredictionEnabled="false"/>
+                           IsTextPredictionEnabled="false"
+                           PlaceholderColor="Black"/>
                 </StackLayout>
             </Border>
 
-            <Button x:Name="ToHeaderQRPage" Text="CVS file header QR" Clicked="OnToHeaderQRPageClicked"/>
+            <Button
+                x:Name="ToScouting"
+                Text="Scout"
+                SemanticProperties.Hint="Opens scouting page"
+                Clicked="OnToScoutingClicked"
+                HorizontalOptions="Center"
+                WidthRequest="200"
+                HeightRequest="40"
+                MaximumWidthRequest="220"
+                MaximumHeightRequest="50"/>
+
+            <Button x:Name="ToHeaderQRPage" Text="Header QR" Clicked="OnToHeaderQRPageClicked" WidthRequest="110"/>
         </VerticalStackLayout>
     </ScrollView>
 
