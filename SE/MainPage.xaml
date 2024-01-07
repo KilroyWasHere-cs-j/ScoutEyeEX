@@ -24,19 +24,19 @@
                 Margin="80,0,0,0"/>
 
             <Label
-                x:Name="VersionNumberLabel"
+                x:Name="GameNameLabel"
                 Text="v.0.0"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
                 HorizontalOptions="Center"/>
 
-            <Label
+            <!--<Label
                 x:Name="BuiltOnDotNETMAUILabel"
                 Text="Built on .NET MAUI"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Level1"
                 FontSize="18"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center" />-->
 
             <Border Stroke="#2B0B98"
                         StrokeShape="RoundRectangle 10,10,10,10"
@@ -70,7 +70,13 @@
                 MaximumHeightRequest="50"/>
 
             <Button x:Name="ToHeaderQRPage" Text="Header QR" Clicked="OnToHeaderQRPageClicked" WidthRequest="110"/>
+            
+            <Label
+                x:Name="VersionNumberLabel"
+                Text="v.0.0"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="14"
+                HorizontalOptions="Center"/>
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>

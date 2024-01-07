@@ -31,6 +31,9 @@ public partial class MainPage : ContentPage
 
         // Set the version number label
         VersionNumberLabel.Text = parser.GetItemById("AppVersion");
+        
+        // Display the name of the current game
+        GameNameLabel.Text = parser.GetItemById("GameName");
     }
 
     // https://raw.githubusercontent.com/frc5687/ScoutEye/main/configs/config.xml

@@ -30,9 +30,10 @@
                 
                 <Entry
                     x:Name="MatchNumberEntry"
-                    Placeholder="0"
+                    Placeholder="0000"
                     FontSize="14"
-                    Keyboard="Numeric"/>
+                    Keyboard="Numeric"
+                    PlaceholderColor="Black"/>
 
                 <Label x:Name="TeamNumberLabel"
                           Text="Team Number"
@@ -41,9 +42,10 @@
 
                 <Entry
                     x:Name="TeamNumberEntry"
-                    Placeholder="5687"
+                    Placeholder="0000"
                     FontSize="14"
-                    Keyboard="Numeric"/>
+                    Keyboard="Numeric"
+                    PlaceholderColor="Black"/>
                 
                 <Label x:Name="AllianceLabel"
                        Text="Pink Alliance"
@@ -52,7 +54,8 @@
 
                 <Switch x:Name="AllianceSwitch"
                         HorizontalOptions="Center"
-                        Toggled="OnAllianceToggledClicked"/>
+                        Toggled="OnAllianceToggledClicked"
+                        BackgroundColor="#2B0B98"/>
             </StackLayout>
             
         </Border>
