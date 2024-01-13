@@ -24,6 +24,8 @@ public partial class HeaderQRPage : ContentPage
 	{
 		InitializeComponent();
 
+        // TODO: Use the XML config file to load in the column header names
+
         // This is a plain text version of the QR code
         OutputFormatLabel.Text = "ScoutName" + " | " + "EX" + " | " + "matchNumber" + " | " + "allianceIsBlue" + " | " + "teamNumber" + " | " + "auto1" + " | " + "auto2" + " | " + "auto3" + " | " + "auto4" + " | " + "auto5" + " | " + "auto6" + " | " + "teleop1" + " | " + "teleop2" + " | " + "teleop3" + " | " + "teleop4" + " | " + "teleop5" + " | " + "teleop6" + " | " + "robotDied" + " | " + "fieldFault" + " | " + "Timer" + " | " + "ClickCount" + " | " + "robotSpeed" + " | " + "givesDefense" + " | " + "takesDefense" + " | " + "vNum/vID";
 
