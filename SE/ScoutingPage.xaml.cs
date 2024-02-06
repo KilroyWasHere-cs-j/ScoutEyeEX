@@ -203,7 +203,9 @@ public partial class ScoutingPage : ContentPage
     /// <returns></returns>
     private string[] GetFill(string id)
     {
+        // Gets the value that determine the type of trackable fill
         string content = parser.GetItemById(id);
+        // Fill is all possitive intergers from 0 to 1000
         if(content.Contains("NumFill"))
         {
             string[] nums = new string[1000];
@@ -214,6 +216,7 @@ public partial class ScoutingPage : ContentPage
             return nums;
         }
         else
+        // Otherwise the fill is a split the content up by commas
         {
             return content.Split(',');
         }
@@ -225,6 +228,7 @@ public partial class ScoutingPage : ContentPage
     /// </summary>
     private async void LogMatch()
     {
+        // TODO: Find a way of doing this without try/catch, currently if the trackable is missing an excetable value an exception will be thrown
         try
         {
             match.auto1 = auto1.SelectedItem.ToString();
