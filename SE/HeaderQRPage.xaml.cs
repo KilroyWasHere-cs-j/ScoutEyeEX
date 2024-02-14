@@ -27,7 +27,7 @@ public partial class HeaderQRPage : ContentPage
         // TODO: Use the XML config file to load in the column header names
 
         // This is a plain text version of the QR code
-        OutputFormatLabel.Text = "ScoutName" + " | " + "EX" + " | " + "matchNumber" + " | " + "allianceIsBlue" + " | " + "teamNumber" + " | " + "auto1" + " | " + "auto2" + " | " + "auto3" + " | " + "auto4" + " | " + "auto5" + " | " + "auto6" + " | " + "teleop1" + " | " + "teleop2" + " | " + "teleop3" + " | " + "teleop4" + " | " + "teleop5" + " | " + "teleop6" + " | " + "robotDied" + " | " + "fieldFault" + " | " + "Timer" + " | " + "ClickCount" + " | " + "robotSpeed" + " | " + "givesDefense" + " | " + "takesDefense" + " | " + "vNum/vID";
+        OutputFormatLabel.Text = "ScoutName" + " | " + "EX" + " | " + "matchNumber" + " | " + "allianceIsBlue" + " | " + "teamNumber" + " | " + "Mobility" + " | " + "Notes in amp" + " | " + "Notes in spk" + " | " + "auto4" + " | " + "auto5" + " | " + "auto6" + " | " + "Notes in amp" + " | " + "Notes in spk" + " | " + "Notes in amped spk" + " | " + "Notes in trap" + " | " + "Spotlit" + " | " + "Climb" + " | " + "robotDied" + " | " + "fieldFault" + " | " + "Timer" + " | " + "ClickCount" + " | " + "robotSpeed" + " | " + "givesDefense" + " | " + "takesDefense" + " | " + "vNum/vID";
 
         // Generate the QR code
         GenerateQR();
@@ -39,7 +39,7 @@ public partial class HeaderQRPage : ContentPage
     public void GenerateQR()
     {
         // Data to be encoded in the QR code
-        string qr_content = "ScoutName" + "\t" + "EX" + "\t" + "matchNumber" + "\t" + "allianceIsBlue" + "\t" + "teamNumber" + "\t" + "auto1" + "\t" + "auto2" + "\t" + "auto3" + "\t" + "auto4" + "\t" + "auto5" + "\t" + "auto6" + "\t" + "teleop1" + "\t" + "teleop2" + "\t" + "teleop3" + "\t" + "teleop4" + "\t" + "teleop5" + "\t" + "teleop6" + "\t" + "robotDied" + "\t" + "fieldFault" + "\t" + "Timer" + "\t" + "ClickCount" + "\t" + "robotSpeed" + "\t" + "givesDefense" + "\t" + "takesDefense" + "\t" + "vNum/vID";
+        string qr_content = "ScoutName" + "\t" + "EX" + "\t" + "matchNumber" + "\t" + "allianceIsBlue" + "\t" + "teamNumber" + "\t" + "Mobility" + "\t" + "Notes in amp" + "\t" + "Notes in spk" + "\t" + "auto4" + "\t" + "auto5" + "\t" + "auto6" + "\t" + "Notes in amp" + "\t" + "Notes in spk" + "\t" + "Notes in amped" + "\t" + "Notes in trap" + "\t" + "Spotlit" + "\t" + "Climb" + "\t" + "robotDied" + "\t" + "fieldFault" + "\t" + "Timer" + "\t" + "ClickCount" + "\t" + "robotSpeed" + "\t" + "givesDefense" + "\t" + "takesDefense" + "\t" + "vNum/vID";
         
         // New QR code generator
         qrGenerator = new QRCodeGenerator();
