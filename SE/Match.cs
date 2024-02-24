@@ -42,6 +42,7 @@
         public string teleop4;
         public string teleop5;
         public string teleop6;
+        public string teleop7;
 
         public int robotSpeed;
         public int givesDefense;

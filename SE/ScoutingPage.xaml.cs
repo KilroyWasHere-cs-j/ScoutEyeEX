@@ -199,6 +199,11 @@ public partial class ScoutingPage : ContentPage
         {
             teleop6.Items.Add(i);
         }
+
+        foreach (var i in GetFill("Teleop6Items"))
+        {
+            teleop7.Items.Add(i);
+        }
     }
 
     /// <summary>
@@ -340,6 +345,14 @@ public partial class ScoutingPage : ContentPage
         }
         try
         {
+            match.teleop7 = teleop7.SelectedItem.ToString();
+        }
+        catch
+        {
+            match.teleop7 = "0";
+        }
+        try
+        {
             match.robotSpeed = Convert.ToInt32(robotSpeed.SelectedItem.ToString());
         }
         catch
@@ -428,6 +441,7 @@ public partial class ScoutingPage : ContentPage
         match.teleop4 = "0";
         match.teleop5 = "0";
         match.teleop6 = "0";
+        match.teleop7 = "0";
 
         match.robotSpeed = 0;
         match.givesDefense = 0;
@@ -552,6 +566,10 @@ public partial class ScoutingPage : ContentPage
     private void Teleop6StepChanged(object sender, ValueChangedEventArgs e)
     {
         teleop6.SelectedIndex = (int)e.NewValue;
+    }
+    private void Teleop7StepChanged(object sender, ValueChangedEventArgs e)
+    {
+        teleop7.SelectedIndex = (int)e.NewValue;
     }
     #endregion
 }

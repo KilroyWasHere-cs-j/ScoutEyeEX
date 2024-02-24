@@ -57,12 +57,12 @@ public class XMLParser
             "<Auto5Items>1,2,3,4,5,6,7,8</Auto5Items>\r\n  " +
             "<Auto5Hide>false</Auto5Hide>\r\n  " +
 
-            "<Auto6>Full Field Cycles</Auto6>\r\n  " +
-            "<Auto6Items>NumFill</Auto6Items>\r\n" +
+            "<Auto6>6th Note</Auto6>\r\n  " +
+            "<Auto6Items>1,2,3,4,5,6,7,8</Auto6Items>\r\n" +
             "<Auto6Hide>false</Auto6Hide>\r\n  " +
 
-            "<Teleop0>Missed Shots</Teleop0>\r\n  " +
-            "<Teleop0Items>1,2,3,4,5,6,7,8</Teleop0Items>\r\n " +
+            "<Teleop0>Successful Shots</Teleop0>\r\n  " +
+            "<Teleop0Items>NumFill</Teleop0Items>\r\n " +
             "<Teleop0Hide>false</Teleop0Hide>\r\n  " +
 
             "<Teleop1>Full Field Cycles</Teleop1>\r\n  " +
@@ -84,6 +84,10 @@ public class XMLParser
             "<Teleop5>Climb</Teleop5>\r\n  " +
             "<Teleop5Items>Success,Fail,Not Attempted</Teleop5Items>\r\n  " +
             "<Teleop5Hide>false</Teleop5Hide>\r\n" +
+
+            "<Teleop6>Holding</Teleop6>\r\n  " +
+            "<Teleop6Items>NumFill</Teleop6Items>\r\n  " +
+            "<Teleop6Hide>true</Teleop6Hide>\r\n  " +
             "</settings>";
         xmlDoc.LoadXml(xml);
     }

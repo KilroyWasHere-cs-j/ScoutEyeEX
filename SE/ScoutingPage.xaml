@@ -75,6 +75,15 @@
                     <VerticalStackLayout x:Name="trackables_auto"
                         HorizontalOptions="Center">
 
+                        <Label x:Name="AutoSectionLabel"
+                               Text="Autonomous"
+                               FontAttributes="Bold"
+                               FontSize="20"
+                               TextColor="Black"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               Margin="20"/>
+
                         <Label x:Name="auto1Label"
                                TextDecorations="Underline"
                                FontSize="18"
@@ -266,6 +275,15 @@
                     <VerticalStackLayout x:Name="trackables_teleop"
                         HorizontalOptions="Center">
 
+                        <Label x:Name="TeleopSectionLabel"
+                               Text="Autonomous"
+                               FontAttributes="Bold"
+                               FontSize="20"
+                               TextColor="Black"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               Margin="20"/>
+
                         <Label x:Name="teleop1Label"
                                  TextDecorations="Underline"
                                  FontSize="18"
@@ -421,6 +439,32 @@
                             Increment="1"
                             HorizontalOptions="Center"
                             ValueChanged="Teleop6StepChanged"/>
+
+                        <Label x:Name="teleop7Label"
+                                    TextDecorations="Underline"
+                                    FontSize="18"
+                                    FontAttributes="Bold"/>
+
+                        <Border x:Name="Border111"
+                                Stroke="#2B0B98"
+                                StrokeShape="RoundRectangle 10,10,10,10"
+                                StrokeThickness="4"
+                                Background="White"
+                                Padding="16,8"
+                                HorizontalOptions="Center"
+                                IsVisible="true">
+
+                            <Picker x:Name="teleop7"
+                                IsVisible="true"
+                                TextColor="Black"
+                                FontSize="14"/>
+
+                        </Border>
+
+                        <Stepper x:Name="teleop7Stepper" Minimum="0" Maximum="1000"
+                          Increment="1"
+                          HorizontalOptions="Center"
+                          ValueChanged="Teleop6StepChanged"/>
 
                         <BoxView HeightRequest="1" Color="#2B0B98" Margin="5"/>
 
