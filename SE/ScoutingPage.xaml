@@ -76,7 +76,7 @@
                         HorizontalOptions="Center">
 
                         <Label x:Name="AutoSectionLabel"
-                               Text="Autonomous"
+                               Text="Section 1"
                                FontAttributes="Bold"
                                FontSize="20"
                                TextColor="Black"
@@ -276,7 +276,7 @@
                         HorizontalOptions="Center">
 
                         <Label x:Name="TeleopSectionLabel"
-                               Text="Autonomous"
+                               Text="Section 2"
                                FontAttributes="Bold"
                                FontSize="20"
                                TextColor="Black"
