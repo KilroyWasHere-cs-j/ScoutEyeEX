@@ -8,6 +8,8 @@ using System.Xml;
 /// Author: Gabriel Tower
 /// Written: 11/2023
 /// 
+/// Last Updated: 2/24/2024
+/// 
 /// Kilroy Was Here
 /// </summary>
 
@@ -82,7 +84,7 @@ public class XMLParser
             "<Teleop4Hide>false</Teleop4Hide>\r\n  " +
 
             "<Teleop5>Climb</Teleop5>\r\n  " +
-            "<Teleop5Items>Success,Fail,Not Attempted</Teleop5Items>\r\n  " +
+            "<Teleop5Items>Success,Fail,Not Attempted,Parked</Teleop5Items>\r\n  " +
             "<Teleop5Hide>false</Teleop5Hide>\r\n" +
             "</settings>";
         xmlDoc.LoadXml(xml);
