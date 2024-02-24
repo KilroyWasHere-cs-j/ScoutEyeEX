@@ -35,6 +35,7 @@
         public string auto4;
         public string auto5;
         public string auto6;
+        public string auto7;
         public string teleop1;
         public string teleop2;
         public string teleop3;

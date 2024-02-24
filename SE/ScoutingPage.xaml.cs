@@ -165,6 +165,11 @@ public partial class ScoutingPage : ContentPage
             auto6.Items.Add(i);
         }
 
+        foreach (var i in GetFill("Auto6Items"))
+        {
+            auto7.Items.Add(i);
+        }
+
         foreach (var i in GetFill("Teleop0Items"))
         {
             teleop1.Items.Add(i);
@@ -276,6 +281,14 @@ public partial class ScoutingPage : ContentPage
         catch
         {
             match.auto6 = "0";
+        }
+        try
+        {
+            match.auto7 = auto7.SelectedItem.ToString();
+        }
+        catch
+        {
+            match.auto7 = "0";
         }
         try
         {
@@ -407,6 +420,7 @@ public partial class ScoutingPage : ContentPage
         match.auto4 = "0";
         match.auto5 = "0";
         match.auto6 = "0";
+        match.auto7 = "0";
 
         match.teleop1 = "0";
         match.teleop2 = "0";
@@ -504,6 +518,10 @@ public partial class ScoutingPage : ContentPage
     private void Auto6StepChanged(object sender, ValueChangedEventArgs e)
     {
         auto6.SelectedIndex = (int)e.NewValue;
+    }
+    private void Auto7StepChanged(object sender, ValueChangedEventArgs e)
+    {
+        auto7.SelectedIndex = (int)e.NewValue;
     }
 
     private void Teleop1StepChanged(object sender, ValueChangedEventArgs e)
