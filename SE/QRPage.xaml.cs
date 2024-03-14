@@ -37,7 +37,7 @@ public partial class QRPage : ContentPage
 	public void GenerateQR()
 	{
         // Compile the QR code content all the data is stored in the match object
-        string qr_content = match.scoutName + "\t" + "EX" + "\t" + match.matchNumber + "\t" + match.isBlue + "\t" + match.teamNumber + "\t" + match.auto1 + "\t" + match.auto2 + "\t" + match.auto3 + "\t" + match.auto4 + "\t" + match.auto5 + "\t" + match.auto6 + "\t" + match.teleop1 + "\t" + match.teleop2 + "\t" + match.teleop3 + "\t" + match.teleop4 + "\t" + match.teleop5 + "\t" + match.teleop6 + "\t" + match.robotDied + "\t" + match.fieldFault + "\t" + "00:00:00" + "\t" + "00" + "\t" + match.robotSpeed + "\t" + match.givesDefense + "\t" + match.takesDefense + "\t" + "EX";    
+        string qr_content = match.scoutName + "\t" + "EX" + "\t" + match.matchNumber + "\t" + match.isBlue + "\t" + match.teamNumber + "\t" + match.auto1 + "\t" + match.auto2 + "\t" + match.auto3 + "\t" + match.auto4 + "\t" + match.auto5 + "\t" + match.auto6 + "\t" + match.auto7 + "\t" + match.teleop1 + "\t" + match.teleop2 + "\t" + match.teleop3 + "\t" + match.teleop4 + "\t" + match.teleop5 + "\t" + match.teleop6 + "\t" + match.teleop7 + "\t" + match.robotDied + "\t" + match.fieldFault + "\t" + "00:00:00" + "\t" + "00" + "\t" + match.robotSpeed + "\t" + match.givesDefense + "\t" + match.takesDefense + "\t" + "EX";    
         
         // Post the raw QR code content to the QRCodeOutputLabel
         OutputLabel.Text = qr_content;
