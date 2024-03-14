@@ -77,7 +77,7 @@ public class XMLParser
             "<Teleop3Items>NumFill</Teleop3Items>\r\n  " +
             "<Teleop3Hide>false</Teleop3Hide>\r\n  " +
 
-            "<Teleop4>Missed Shots</Teleop4>\r\n  " +
+            "<Teleop4>Amp missed</Teleop4>\r\n  " +
             "<Teleop4Items>NumFill</Teleop4Items>\r\n  " +
             "<Teleop4Hide>false</Teleop4Hide>\r\n  " +
 
@@ -85,9 +85,9 @@ public class XMLParser
             "<Teleop5Items>Success,Fail,Not Attempted</Teleop5Items>\r\n  " +
             "<Teleop5Hide>false</Teleop5Hide>\r\n" +
 
-            "<Teleop6>Holding</Teleop6>\r\n  " +
+            "<Teleop6>Spk missed</Teleop6>\r\n  " +
             "<Teleop6Items>NumFill</Teleop6Items>\r\n  " +
-            "<Teleop6Hide>true</Teleop6Hide>\r\n  " +
+            "<Teleop6Hide>false</Teleop6Hide>\r\n  " +
             "</settings>";
         xmlDoc.LoadXml(xml);
     }

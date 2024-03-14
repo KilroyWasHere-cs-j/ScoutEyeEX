@@ -41,8 +41,9 @@ public partial class HeaderQRPage : ContentPage
             "Full Field Cycle" + " | " +
             "Notes in Speaker" + " | " +
             "Notes in Amplifier" + " | " + 
-            "Missed Shots" + " | " + 
-            "Climb" + " | " + 
+            "Amp Missed Shots" + " | " + 
+            "Climb" + " | " +
+            "Spk Missed Shots" + " | " +
             "robotDied" + " | " + 
             "fieldFault" + " | " + 
             "Timer" + " | " + 
@@ -77,8 +78,9 @@ public partial class HeaderQRPage : ContentPage
             "Full Field Cycle" + "\t" + 
             "Notes in Amp" + "\t" + 
             "Notes in Spk" + "\t" + 
-            "Missed Shots" + "\t" +
+            "Amp Missed Shots" + "\t" +
             "Climb" + "\t" +
+            "Spk Missed Shots" + "\t" +
             "robotDied" + "\t" + 
             "fieldFault" + "\t" + 
             "Timer" + "\t" + 
