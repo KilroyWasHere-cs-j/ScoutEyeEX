@@ -28,8 +28,7 @@ ScoutEyeEX is build on top of the [.NET MAUI](https://dotnet.microsoft.com/en-us
 - iOS
 
 
-## How to install
-
-Detailed instructions to come
+### Depreciation
+This is no more; which would be sad, but now I can live in peace. Feel free to steal this code and do whatever you want to it. I will not be reviving this project so don't ask. Goodbye ScoutEye it was fun whilst it lasted.
 
 
